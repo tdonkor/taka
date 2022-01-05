@@ -1,0 +1,130 @@
+.ui-button {
+  text-transform: uppercase;
+  border: none;
+  line-height: unset;
+  min-height: 70rem;
+  padding: 10rem 35rem;
+  border-radius: 70rem;
+  font-weight: normal;
+  font-size: 30rem;
+  transition: all 150ms linear;
+  color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  box-sizing: border-box;
+  height: unset;
+
+  &.primary {
+    background: transparent;
+    border: 4rem solid var(--secondary);
+  }
+
+  &.secondary {
+    background: var(--primary); // Added by TD
+    color: var(--pantone-blue); // Added by TD
+    border: 1px solid var(--pantone-blue);
+  }
+
+  &.color--tertiary {
+    color: var(--tertiary);
+    border-color: currentColor;
+  }
+
+  &.color--light-gray {
+    color: var(--light-gray);
+    border-color: currentColor;
+  }
+
+  &.bg--tertiary {
+    background: var(--tertiary);
+    border-color: var(--tertiary);
+    color: var(--secondary);
+  }
+
+  &.bg--white {
+    background: var(--white);
+    border-color: var(--secondary);
+    color: var(--primary);
+  }
+
+  &.simple {
+    min-width: unset;
+    height: unset;
+    color: var(--light-gray);
+    padding: 10rem 25rem;
+  }
+
+  &.tiny {
+    min-height: 52rem;
+    padding: 6rem 24rem;
+  }
+
+  &.small {
+    min-width: 220rem;
+  }
+
+  &.medium {
+    min-width: 290rem;
+  }
+
+  &.large {
+    min-width: 390rem;
+  }
+
+  &.x-large {
+    width: 380rem;
+    height: 86rem;
+  }
+
+  &.xx-large {
+    width: 390rem;
+    height: 112rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &.icon-button {
+    min-width: unset;
+    height: unset;
+    color: var(--icon-primary-color);
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: inherit;
+  }
+
+  // The svg icon inherits the button color
+  .lib-icon {
+    margin: 0 10rem;
+
+    use {
+      --icon-primary-color: currentColor;
+
+      transition: color 250ms ease-in-out;
+    }
+  }
+
+  &.iconLeft {
+    .lib-icon {
+      margin-left: -10rem;
+    }
+  }
+
+  &.iconRight {
+    .ui-button__wrapper {
+      flex-direction: row-reverse;
+    }
+
+    .lib-icon {
+      margin-right: -10rem;
+      margin-left: 5rem;
+    }
+  }
+}

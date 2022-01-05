@@ -1,0 +1,61 @@
+.popup--allergens {
+  .content {
+    height: 80%;
+  }
+}
+
+.content-box {
+  padding: 40rem 80rem;
+
+  > * {
+    color: var(--secondary);
+  }
+}
+
+.allergens-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40rem;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  list-style-type: none;
+  max-height: 60vh;
+  max-width: 80%;
+  overflow-y: overlay;
+  padding: 40rem 20rem;
+  margin: 40rem auto;
+
+  .allergen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2rem solid var(--secondary);
+    padding: 12rem 20rem;
+    width: 100%;
+    border-bottom-left-radius: 20rem;
+    border-top-right-radius: 20rem;
+    transition: all 250ms ease-in-out;
+
+    &__icon {
+      width: 54rem;
+      height: 54rem;
+    }
+
+    &__title {
+      line-height: 1;
+      padding: 0 14rem;
+      font-size: 22rem;
+      color: var(--secondary);
+    }
+
+    &.selected {
+      background: var(--accent);
+      border: 2rem solid var(--accent);
+
+      > * {
+        color: var(--primary);
+      }
+    }
+  }
+}

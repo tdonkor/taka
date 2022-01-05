@@ -1,0 +1,28 @@
+<div class="main-grid">
+  <section class="col-1-17 row-1-10 flex flex--column center justify--evenly">
+    <img class="logo" src="./assets/branding/taka.PNG" alt="" />
+  </section>
+	<section class="col-2-16 row-10-28 flex flex--column center">
+		<p class="fs--42 font--secondary text--center" [innerHTML]="legalMessage"></p>
+	</section>
+  <section class="flex center justify--between col-2-16 row-28-31">
+    <button
+      class="ui-button primary color--tertiary medium"
+      [attr.aria-label]="'Cancel Legal Requirements'"
+      (click)="denyLegalTerms()"
+    >
+      <span class="ui-button__wrapper">
+        <span>{{ "23" | dotTranslate }}</span>
+      </span>
+    </button>
+    <button
+      class="ui-button secondary medium"
+      [attr.aria-label]="'Accept Legal Requirements'"
+      (click)="acceptLegalTerms()"
+    >
+      <span class="ui-button__wrapper">
+        <span>{{ "71" | dotTranslate }}</span>
+      </span>
+    </button>
+  </section>
+</div>

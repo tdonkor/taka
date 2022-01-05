@@ -1,0 +1,86 @@
+<div [@popupOut] *ngIf="!exitAnimation" class="popup">
+  <div [@popupIn] class="content" [ngClass]="{ height90: displayModifierButtons, height60: !displayModifierButtons }">
+    <div class="main-grid">
+      <section
+        class="flex flex--column center col-1-17 scrollY hideScrollbar main-grid__button-details"
+        [ngClass]="{
+          'row-1-18': isAdaEnabled() && displayModifierButtons && !button.isPromo,
+          'row-1-15': !isAdaEnabled() && displayModifierButtons && !button.isPromo,
+          'row-1-28': !displayModifierButtons,
+          'row-1-10': displayModifierButtons && button.isPromo
+        }"
+      >
+        <div class="products--grid cols--3">
+          <button class="product col-2">
+            <h5 class="product__title">{{ button | translateCatalogTitle }}</h5>
+            <div class="product__img-placeholder">
+              <img class="product__img" [src]="button | catalogPicture" />
+            </div>
+            <div class="product__info">
+              <div class="calories">
+                <span *ngIf="calories">{{ calories }} Cal I</span>
+                <!-- {{ unitPrice | dotCurrency}}  -->
+              </div>
+              <svg class="lib-icon color--tertiary size--30">
+                <use href="#lib-icon--pill-chevron-right"></use>
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <ng-container *ngIf="!button.isPromo">
+          <h3>{{ '66' | dotTranslate }}</h3>
+          <acr-buttons-counter-edit
+            [quantity]="quantity()"
+            (quantityUpdate)="onQuantityUpdate($event)"
+            [price]="price"
+            [minQuantity]="1"
+            [maxQuantity]="button.MaxQuantity"
+            [hasPrefixes]="false"
+          ></acr-buttons-counter-edit>
+        </ng-container>
+
+      </section>
+
+      <ng-container *ngIf="displayModifierButtons">
+        <section
+          class="flex flex--column scrollY hideScrollbar col-1-17"
+          [ngClass]="enabledTouchlessMode() ? 'row-15-26' : button.isPromo ? 'row-10-28' : isAdaEnabled() ? 'row-18-28' : 'row-15-28'"
+          #scrollRef
+        >
+          <ng-container *ngFor="let modifier of modifiers">
+            <acr-button-modifier-list
+              class="modifiers-list withoutHeader"
+              [modifier]="modifier"
+              [catalogModifierLabelText]="catalogModifierLabelText"
+              [isButtonChanged]="isButtonChanged"
+              [onOrder]="!button.isChanged"
+            ></acr-button-modifier-list>
+          </ng-container>
+        </section>
+        <acr-vertical-scroll-buttons
+          *ngIf="enabledTouchlessMode()"
+          class="scroll-nav col-1-17 row-26-28"
+          [scrollRef]="scrollRef"
+          [incrementHeight]="scrollIncrement"
+        ></acr-vertical-scroll-buttons>
+      </ng-container>
+      <footer class="actions col-1-17 row-28-31">
+        <button class="ui-button primary small" (click)="cancelClick()">
+          <span class="ui-button__wrapper">
+            <span>{{ '23' | dotTranslate }}</span>
+          </span>
+        </button>
+
+        <button class="ui-button secondary small iconRight" (click)="confirmClick()" [disabled]="disableConfirmButton">
+          <span class="ui-button__wrapper">
+            <svg class="lib-icon size--20">
+              <use href="#lib-icon--chevron-right"></use>
+            </svg>
+            <span>{{ '71' | dotTranslate }}</span>
+          </span>
+        </button>
+      </footer>
+    </div>
+  </div>
+</div>

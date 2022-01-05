@@ -1,0 +1,30 @@
+<div class="nav-slider full" [ngClass]="{'firstItemFixed': isHomeButtonDocked, 'hasNavArrows' : hasNavArrows}">
+  <button (click)="goToHomePage()" *ngIf="isHomeButtonDocked" [ngClass]="{'selected': selectedNavButtonLink === mainPage.ID }" class="nav-slider-item nav-slider-item--home" [attr.aria-label]="'Nav Slider Button: Home'">
+    <span class="nav-slider-item__title">{{ '1' | dotTranslate }}</span>
+    <img src="./assets/branding/taka.PNG"/>
+  </button>
+  <div class="nav-slider__wrapper">
+    <div class="nav-slider__container hideScrollbar" (scroll)="evaluateDisable()" #scrollRef>
+      <button (click)="goToHomePage()" *ngIf="isHomeButtonScrollable"  [ngClass]="{'selected': selectedNavButtonLink === mainPage.ID }" class="nav-slider-item nav-slider-item--home" [attr.aria-label]="'Nav Slider Button Home'">
+        <span class="nav-slider-item__title">{{ '1' | dotTranslate }}</span>
+        <img src="./assets/branding/taka.PNG"/>
+      </button>
+      <button (click)="navigate(button, i)" [ngClass]="{'selected': selectedNavButtonLink === button.Link }" *ngFor="let button of modifiedNavigationButtons; let i = index" class="nav-slider-item" attr.aria-label="Nav Slider Button: {{ button | dotTranslateCaption }}">
+        <span class="nav-slider-item__title">{{ button | dotTranslateCaption }}</span>
+        <img [src]="button | translatePicture" />
+      </button>
+    </div>
+    <ng-container *ngIf="hasNavArrows">
+      <button #arrowLeft [disabled]="disableLeftArrow" class="nav-slider__controller controller--left" [attr.aria-label]="'Nav Slider Button: Scroll Left'" (click)="scrollLeft()">
+        <svg class="lib-icon color--white size--30">
+          <use href="#lib-icon--chevron-left"></use>
+        </svg>
+      </button>
+      <button #arrowRight [disabled]="disableRightArrow" class="nav-slider__controller controller--right" [attr.aria-label]="'Nav Slider Button: Scroll Right'" (click)="scrollRight()">
+        <svg class="lib-icon color--white size--30">
+          <use href="#lib-icon--chevron-right"></use>
+        </svg>
+      </button>
+    </ng-container>
+  </div>
+</div>

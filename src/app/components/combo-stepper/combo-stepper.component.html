@@ -1,0 +1,124 @@
+<div [@popupOut] *ngIf = "!exitAnimation" class="popup popup--combo combo">
+  <div [@popupIn] class="content">
+    <div class="main-grid">
+      
+      <section class="col-1-17 row-1-10">
+        <header class="header full">
+          <img *ngFor="let headerButton of headerButtons; let i = index"
+                [ngStyle]="setInlineStyle(i, headerButtons.length - i)"
+                class="combo-img"
+                [src]="headerButton | translatePicture" alt="">
+          <div class="combo-name">
+            <h3>{{ parentButton ? (parentButton | dotTranslateCaption) : '' }}</h3>
+            <h4>{{ subtitle }}</h4>
+          </div>
+        </header>
+      </section>
+      
+      <section class="col-1-17 row-10-12 position-relative">
+        <header class="top-menu full">
+          <button *ngIf="displayBackButton" class="ui-button primary bg--tertiary tiny iconLeft" (click)='backClick()' [attr.aria-label]="'Combo Back Button'">
+            <span class="ui-button__wrapper">
+              <svg class="lib-icon size--20"><use href="#lib-icon--chevron-left"></use></svg>
+              <span>{{ '9' | dotTranslate }}</span>
+            </span>
+          </button>
+          <h4 *ngIf="currentComboStepState === ComboStepState.CHOOSE" class="top-menu__title fs--40">{{ currentCombo | translateComboStepTitle }}</h4>
+          <h4 *ngIf="currentComboStepState === ComboStepState.CUSTOMIZE && comboModifierLabelText" class="top-menu__title fs--40">{{ comboModifierLabelText }}</h4>
+        </header>
+      </section>
+      <!-- [ngClass]="enabledTouchlessMode() ? 'row-12-26' : !isAdaEnabled() ? 'row-12-28' : 'row-12-26'" -->
+      <section class="flex flex--column scrollY hideScrollbar col-1-17" #scrollRef 
+              [ngClass]="
+              getTouchlessClass({
+                classFullHD: 'row-12-28',
+                classAda: 'row-12-26',
+                classFullHDTouchless: 'row-12-26',
+                classAdaTouchless: 'row-12-24'
+              })
+            "
+      >
+        <!-- aca: take this mark-up for complement feature -->
+        <!-- <acr-collapsible class="full"></acr-collapsible> -->
+        <ng-container *ngIf="currentComboStepState === ComboStepState.CHOOSE">
+          <div class="modifiers-list withoutHeader">
+            <div class="products--grid auto--columns"
+                [ngClass]="{'sizes--selector' : isComboUpsize, 'centered' : comboStepButtons.length > 2}">
+              <acr-button-modifier *ngFor='let comboStepButton of comboStepButtons | catalogButtonAvailability' 
+                                    [modifierButton]='comboStepButton'
+                                    [displayUpsizePrice]="isComboUpsize"
+                                    (selectedModifiers)='chooseComboButton($event)'
+                                    [maxQuantityGroup]='comboStepButton.MaxQuantity'
+                                    [minQuantityGroup]='comboStepButton.MinQuantity' 
+                                    [getQuantityButtons]='0'
+                                    [customPrice]="getComboStepButtonPrice(comboStepButton)"
+                                    [showCounterEdit]="false"
+              >
+              </acr-button-modifier>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="currentComboStepState === ComboStepState.SUBGROUP">
+          <div class="modifiers-list withoutHeader">
+            <div class="products--grid auto--columns"
+                [ngClass]="{'sizes--selector' : isComboUpsize, 'centered' : filteredComboStepButtons.length > 2}">
+              <acr-button-modifier *ngFor='let comboStepButton of filteredComboStepButtons | catalogButtonAvailability' 
+                        [modifierButton]='comboStepButton'
+                        [displayUpsizePrice]="isComboUpsize"
+                        (selectedModifiers)='chooseComboButtonSubgroup($event)'
+                        [maxQuantityGroup]='comboStepButton.MaxQuantity'
+                        [minQuantityGroup]='comboStepButton.MinQuantity' 
+                        [getQuantityButtons]='0'
+                        [customPrice]="getComboStepButtonPrice(comboStepButton)"
+                        [showCounterEdit]="false">
+              </acr-button-modifier>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="currentComboStepState === ComboStepState.CUSTOMIZE">
+          <ng-container *ngFor='let comboButtonModifier of currentComboStepButton.ModifiersPage.Modifiers'>
+          <acr-button-modifier-list  
+            class="modifiers-list withoutHeader"
+            [modifier]='comboButtonModifier'
+            [isCombo]='true'
+            [isButtonChanged]="isButtonChanged" 
+            [onOrder]='!this.button.isChanged'
+          >
+          </acr-button-modifier-list>
+        </ng-container>
+      </ng-container>
+      </section>
+      <acr-vertical-scroll-buttons
+        *ngIf="enabledTouchlessMode()"
+        class="scroll-nav col-1-17"
+        [ngClass]="!isAdaEnabled() ? 'row-26-28' : 'row-24-26'"
+        [scrollRef]="scrollRef"
+        [incrementHeight]="scrollIncrement"
+      >
+      </acr-vertical-scroll-buttons>
+      <section class="col-1-17" [ngClass]="!isAdaEnabled() ? 'row-28-31' : 'row-26-31'">
+        <div class="actions full">
+          <button class="ui-button primary small" (click)='cancelClick()' [attr.aria-label]="'Cancel Button'">
+            <span class="ui-button__wrapper">
+              <span>{{ '23' | dotTranslate}}</span>
+            </span>
+          </button>
+          
+          <acr-steps class="stepper" [steps]="interfaceCombos" [activeIndex]="currentComboStepIndex"></acr-steps>
+      
+          <button [disabled]="disableConfirmButton" class="ui-button secondary iconRight small" (click)='confirmClick()' [attr.aria-label]="'Confirm Button'">
+            <span class="ui-button__wrapper">
+              <svg class="lib-icon size--20">
+                <use href="#lib-icon--chevron-right"></use>
+              </svg>
+              <span *ngIf="!isLastStep">{{ '28' | dotTranslate}}</span>
+              <span *ngIf="isLastStep" [ngClass]="{'fs--26' : isLastStep}">{{ '27' | dotTranslate}}</span>
+            </span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

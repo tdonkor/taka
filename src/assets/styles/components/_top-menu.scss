@@ -1,0 +1,16 @@
+@use '../mixins';
+
+.top-menu {
+  display: flex;
+  padding: 0 40rem;
+  align-items: center;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    font-size: 50rem;
+    text-align: center;
+
+    @include mixins.center;
+  }
+}

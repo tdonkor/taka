@@ -1,0 +1,15 @@
+<div class="main-grid">
+  <section class="col-1-17 row-1-12 flex flex--column center justify--evenly">
+    <img class="logo" src="./assets/branding/takahead.PNG" alt="">
+    <h2 class="text--center">{{ "36" | dotTranslate }}</h2>
+  </section>
+  <section class="flex flex--column center col-1-17 " [ngClass]="!isAdaEnabled() ? 'row-12-20' : 'row-12-25'">
+    <div class="square bg--primary flex flex--column center">
+      <h3 class="color--white text--center">{{ "34" | dotTranslate }}</h3>
+      <h1 class="big--heading color--pantone-blue">{{ orderNumber }}</h1>
+    </div>
+  </section>
+  <section class="col-2-16" [ngClass]="!isAdaEnabled() ? 'row-23-31' : 'row-26-31'">
+    <h2 class="text--center">{{ '35' | dotTranslate }}</h2>
+  </section>
+</div>

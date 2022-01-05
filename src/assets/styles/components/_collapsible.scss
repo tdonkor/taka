@@ -1,0 +1,33 @@
+.collapsible {
+  padding: 10rem 30rem;
+
+  &__content {
+    overflow: hidden;
+    background: var(--background-light-gray);
+    margin: 8rem 0;
+  }
+
+  &__title {
+    font-size: 30rem;
+    position: relative;
+  }
+
+  &__toggle {
+    font-size: 30rem;
+    width: 100%;
+    padding: 20rem;
+    filter: var(--shadow-filter);
+    background: var(--background-light-gray);
+    border-bottom-left-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .lib-icon {
+      position: absolute;
+      top: 10rem;
+      right: -36rem;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.scroll-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  box-shadow: 1rem -13rem 17rem 0 rgb(0 0 0 / 5%);
+  border-bottom: 3rem solid var(--primary);
+  z-index: 1;
+
+  &__text {
+    text-transform: uppercase;
+  }
+
+  &__up,
+  &__down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    background: var(--primary);
+    border-radius: 50%;
+    width: 60rem;
+    height: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30rem;
+
+    .lib-icon {
+      margin-bottom: -3rem;
+    }
+  }
+}

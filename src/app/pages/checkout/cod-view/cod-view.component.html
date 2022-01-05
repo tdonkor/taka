@@ -1,0 +1,42 @@
+<div class="main-grid cod-view">
+  <header class="cod-view__header full flex center col-1-17 row-1-4">
+    <h4 class="color--white">{{ "7" | dotTranslate }}</h4>
+  </header>
+  <section class="card-list hideScrollbar col-2-16" #scrollRef
+          [ngClass]="!isAdaEnabled() ? 'row-4-24' : 'row-4-23'"
+  >
+    <acr-product-card *ngFor="let button of formattedButtons" class="product-card" [basketButton]="button" (productRemoved)="productRemoved()">
+    </acr-product-card>
+  </section>
+  
+  <acr-vertical-scroll-buttons *ngIf="enabledTouchlessMode()" class="scroll-nav col-1-17"
+  [ngClass]="!isAdaEnabled() ? 'row-24-26' : 'row-23-26'"
+  [scrollRef]="scrollRef" [incrementHeight]="scrollIncrement">
+  </acr-vertical-scroll-buttons>
+  
+  <section class="cod-view__total col-2-16 row-26-28" [attr.aria-label]="'Cod View Total'">
+    <div class="row" *ngIf="hasOrderDiscount">
+      <h4 class="total">{{ '20210504004' | dotTranslate}}</h4>
+      <h4 class="price-holder">
+        <span class="price">{{ orderDiscount | dotCurrency: true }}</span>
+      </h4>
+    </div>
+    <div class="row">
+      <h3 class="total">{{ '63' | dotTranslate}}</h3>
+      <h3 class="price-holder">
+        <span class="price">{{ totalPrice | dotCurrency: true }}</span>
+      </h3>
+    </div>
+  </section>
+  
+  <footer class="footer" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-28-31' : 'col-2-16 row-28-31'">
+    <acr-footer-actions class="footer__body" 
+      [leftBtnMethod]="'goBack'" 
+      [leftBtnAriaLabel] = "'Go Back Button'" 
+      [leftBtnTranslate]="'16'" 
+      [rightBtnMethod]="'payOrder'" 
+      [rightBtnAriaLabel] = "'Pay Order Button'" 
+      [rightBtnTranslate]="'17'">
+    </acr-footer-actions>
+  </footer>
+</div>

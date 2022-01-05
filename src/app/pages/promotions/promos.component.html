@@ -1,0 +1,68 @@
+<div [@popupOut] *ngIf = "!exitAnimation" class="popup popup--promos">
+	<div [@popupIn] class="content height70">
+		<div class="main-grid">
+      <div class="col-1-17 row-1-28 flex flex--column center justify--evenly" [ngSwitch]="componentState" >
+        <section class="voucher-input" *ngSwitchCase="promosState.START">
+          <button class="voucher-input__button" (click)="showKeyboard()">
+            <h3>{{ 87 | dotTranslate }}</h3>
+            <div class="voucher-input__box">
+              <img src="./assets/images/numeric-keyboard.png" alt="">
+            </div>
+          </button>
+          <h4 class="text--center pt--140"> OR </h4>
+          <button class="voucher-input__button" (click)="showScan()">
+            <h3>{{ 88 | dotTranslate }}</h3>
+            <div class="voucher-input__box">
+              <img src="./assets/images/qr-scan.png" alt="">
+            </div>
+          </button>
+        </section>
+
+        <section class="full flex flex--column center justify--evenly" *ngSwitchCase="promosState.SCAN">
+          <h3 class="text--center">{{ 89 | dotTranslate }}</h3>
+          <acr-scan (barcodeChanged)="scanCodeHandler($event)"></acr-scan>
+          <svg class="lib-icon color--accent size--140">
+            <use href="#lib-icon--long-arrow-down"></use>
+          </svg>
+        </section>
+        
+        <section class="width100" *ngSwitchCase="promosState.KEYBOARD">
+          <h3 class="text--center">{{ 40 | dotTranslate }}</h3>
+          <acr-keyboard (inputChanged)="barcodeChangedHandler($event)" [text]="barcode"></acr-keyboard>
+        </section>
+        
+        <section class="scrollY m--40 p--40 full--width hideScrollbar flex flex--column" *ngSwitchCase="promosState.VALID_PROMOS">
+          <h3 class="text--center">Choose your offer</h3>
+          <div class="modifiers-list withoutHeader">
+            <div class="products--grid promos-modifiers auto--columns centered">
+              <acr-button-modifier *ngFor="let button of promoPage.Buttons | catalogButtonAvailability"
+                [modifierButton]="button"
+                (selectedModifiers)="selectButton($event)"
+              >
+              </acr-button-modifier>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <div class="col-1-17 row-28-31">
+        <div class="actions full" [ngClass]="{'justify--center' : !showContinueButton()}">
+          <button class="ui-button primary small" (click)='cancelClick()' [attr.aria-label]="'Cancel Button'">
+            <span class="ui-button__wrapper">
+              <span>{{ '23' | dotTranslate}}</span>
+            </span>
+          </button>
+    
+          <button class="ui-button secondary iconRight small" (click)='onContinueButtonClicked()' [attr.aria-label]="'Confirm Button'" *ngIf="showContinueButton()">
+            <span class="ui-button__wrapper">
+              <svg class="lib-icon size--20">
+                <use href="#lib-icon--chevron-right"></use>
+              </svg>
+              <span>{{ '71' | dotTranslate}}</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

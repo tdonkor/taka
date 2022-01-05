@@ -1,0 +1,14 @@
+{
+  "AppIdentifier": "com.acrelec.KFCES",
+  "AppSignature": "9987c38eb4f241b480787840ca48690c",
+  "AppKey": "61fb3dcd3c484aa484d9dce01600d5a2",
+  "AppVersion": "2.0.0bis",
+  "AppVersionDetails": "",
+  "IsBeta": true,
+  "SharedFolderPath": "C:\\WWW\\dunkin\\projects\\dk-us\\src\\assets\\shared",
+  "AppFolderPath": "C:\\WWW\\dunkin\\projects\\dk-us\\src",
+  "ChannelsFolderPath": [],
+  "AppName": "Dunkin DotXIX",
+  "AppCategory": "food",
+  "AppType": "webapp"
+}

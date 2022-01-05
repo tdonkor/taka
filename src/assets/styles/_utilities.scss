@@ -1,0 +1,501 @@
+/*
+
+#
+###
+##### GENERAL
+###
+#
+
+*/
+
+h1 {
+  font-size: 80rem;
+}
+
+h2 {
+  font-size: 60rem;
+}
+
+h3 {
+  font-size: 46rem;
+}
+
+h4 {
+  font-size: 36rem;
+}
+
+h5 {
+  font-size: 26rem;
+}
+
+h6 {
+  font-size: 16rem;
+}
+
+// Button Resets
+button {
+  border: none;
+  outline: unset;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  margin: 0;
+  padding: 0;
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+    > * {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+video {
+  height: -webkit-fill-available;
+}
+
+.logo {
+  max-width: 200rem;
+
+  &.large {
+    max-width: 300rem;
+  }
+
+  &.medium {
+    max-width: 200rem;
+  }
+
+  &.small {
+    max-width: 100rem;
+  }
+}
+
+.font--secondary {
+  font-family: var(--font-secondary);
+}
+
+.font--tertiary {
+  font-family: var(--font-tertiary);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*
+
+#
+###
+##### HELPERS
+###
+#
+
+*/
+
+.scrollY {
+  overflow-y: overlay;
+}
+
+.scrollX {
+  overflow-x: overlay;
+}
+
+.flex {
+  display: flex;
+
+  &.center {
+    place-items: center;
+    justify-content: center;
+  }
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--column-reverse {
+  flex-direction: column-reverse;
+}
+
+.full {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.full--height {
+  height: 100% !important;
+}
+
+.full--width {
+  width: 100% !important;
+}
+
+.align--center {
+  align-items: center !important;
+}
+
+.align--start {
+  align-items: flex-start !important;
+}
+
+.align--end {
+  align-items: flex-end !important;
+}
+
+.self--end {
+  justify-self: end !important;
+}
+
+.self--start {
+  justify-self: start !important;
+}
+
+.self--center {
+  justify-self: center !important;
+}
+
+.text--center {
+  text-align: center !important;
+}
+
+.text--left {
+  text-align: left !important;
+}
+
+.text--right {
+  text-align: right !important;
+}
+
+.justify--center {
+  justify-content: center !important;
+}
+
+.justify--between {
+  justify-content: space-between !important;
+}
+
+.justify--around {
+  justify-content: space-around !important;
+}
+
+.justify--evenly {
+  justify-content: space-evenly !important;
+}
+
+.align-self--start {
+  align-self: flex-start;
+}
+
+.align-self--end {
+  align-self: flex-end;
+}
+
+.justify--end {
+  justify-content: flex-end !important;
+}
+
+// Text Specific Styles
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.transform--none {
+  text-transform: none;
+}
+
+// Colors Helpers
+.color--accent {
+  color: var(--primary); // Added by TD
+}
+
+.color--red {
+  color: var(--red);
+}
+
+.color--orange {
+  color: var(--orange);
+
+  > * {
+    color: currentColor;
+  }
+}
+
+.color--tertiary {
+  color: var(--tertiary);
+}
+
+.color--light-gray {
+  color: var(--light-gray);
+}
+
+.color--error-red {
+  color: var(--error-red);
+}
+
+.color--white {
+  color: var(--white);
+}
+
+// UTILITY CLASSES FOR BACKGROUND COLORS
+.bg--primary {
+  background: var(--primary);
+}
+
+.bg--white {
+  background: var(--white);
+}
+
+.bg--orange {
+  background: var(--orange);
+}
+
+.bg--accent {
+  background: var(--accent);
+}
+
+.bg--dark-gray {
+  background: var(--dark-gray);
+}
+
+.bg--light-gray {
+  background: var(--background-light-gray);
+}
+
+.bg--blue {
+  background: var(--blue);
+}
+
+.bg--red {
+  background: var(--red);
+}
+
+.bg--purple {
+  background: var(--purple);
+}
+
+// Height Utilities
+.height50 {
+  height: 50%;
+}
+
+.height60 {
+  height: 60%;
+}
+
+.height70 {
+  height: 70%;
+}
+
+.height80 {
+  height: 80%;
+}
+
+.height90 {
+  height: 90%;
+}
+
+.height100 {
+  height: 100%;
+}
+
+// Width Utilities
+.width50 {
+  width: 50%;
+}
+
+.width60 {
+  width: 60%;
+}
+
+.width70 {
+  width: 70%;
+}
+
+.width80 {
+  width: 80%;
+}
+
+.width90 {
+  width: 90%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+// Font sizes helper classes
+// These clases overwrite any other font-sizes applied
+@for $i from 1 through 120 {
+  .fs--#{$i} {
+    font-size: #{$i}rem;
+  }
+}
+
+// Spacers
+@for $i from 1 through 10 {
+  $j: $i * 10;
+
+  .spacer--#{$j} {
+    display: block;
+    height: #{$j}rem;
+    width: #{$j}rem;
+  }
+}
+
+@for $i from 8 through 30 {
+  $j: $i * 10;
+  .size--#{$j} {
+    width: #{$j}rem;
+    height: #{$j}rem;
+    max-width: #{$j}rem;
+    max-height: #{$j}rem;
+  }
+}
+
+@for $j from 1 through 90 {
+  .size--#{$j} {
+    width: #{$j}rem;
+    height: #{$j}rem;
+    max-width: #{$j}rem;
+    max-height: #{$j}rem;
+  }
+}
+
+// Use these helpers to adjust margins and paddings
+
+@for $i from 0 through 10 {
+  $j: $i * 10;
+
+  .ml--#{$j} {
+    margin-left: #{$j}rem;
+  }
+
+  .mr--#{$j} {
+    margin-right: #{$j}rem;
+  }
+
+  .mt--#{$j} {
+    margin-top: #{$j}rem;
+  }
+
+  .mb--#{$j} {
+    margin-bottom: #{$j}rem;
+  }
+
+  .m--#{$j} {
+    margin: #{$j}rem;
+  }
+}
+
+@for $i from 0 through 14 {
+  $j: $i * 10;
+
+  .pl--#{$j} {
+    padding-left: #{$j}rem;
+  }
+
+  .pr--#{$j} {
+    padding-right: #{$j}rem;
+  }
+
+  .pt--#{$j} {
+    padding-top: #{$j}rem;
+  }
+
+  .pb--#{$j} {
+    padding-bottom: #{$j}rem;
+  }
+
+  .p--#{$j} {
+    padding: #{$j}rem;
+  }
+}
+
+.p0 {
+  padding: 0;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.unstyled-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+#
+###
+##### SCROLLBAR STYLES
+###
+#
+
+*/
+
+::-webkit-scrollbar {
+  width: 10rem;
+  height: 10rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5rem;
+  background-color: var(--accent);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 5rem;
+  background-color: var(--accent);
+}
+
+// Used to hide scrollbars where needed
+.hideScrollbar {
+  // Hides scrollbar in firefox. Only for debugging.
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.eventsNone {
+  pointer-events: none;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}

@@ -1,0 +1,26 @@
+<div class="main-grid">
+  <section class="flex flex--column center" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-1-8' : 'col-1-17 row-1-5'">
+    <img class="logo" src="./assets/branding/taka.PNG" alt="" />
+  </section>
+  <div *ngIf="text.title" class="flex flex--column align--center" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-8-10' : 'col-1-17 row-8-10'">
+    <h3 class="m--20">{{ text.title | dotTranslate }}<span class="color--accent fs--56"> {{ text.amount | dotCurrency:true }}</span></h3>
+  </div>
+
+  <section class="flex flex--column align--center"
+    [ngClass]="!isAdaEnabled() ? 'col-2-16 row-10-28' : 'col-2-16 row-10-27'">
+    <p class="fs--34 font--secondary text--center" [innerHTML]="text.message | dotTranslate"></p>
+  </section>
+
+  <section *ngIf="displayButtonsOnError" class="col-2-16 row-28-31 flex center justify--between">
+    <button (click)="continueClick()" class="ui-button secondary medium" [attr.aria-label]="'Continue'">
+      <span class="ui-button__wrapper">
+        <span>{{ "28" | dotTranslate }}</span>
+      </span>
+    </button>
+    <button (click)="printReceiptClick()" class="ui-button primary color--tertiary medium" [attr.aria-label]="'Print Receipt'">
+      <span class="ui-button__wrapper">
+        <span>{{ "2021022413" | dotTranslate }}</span>
+      </span>
+    </button>
+  </section>
+</div>

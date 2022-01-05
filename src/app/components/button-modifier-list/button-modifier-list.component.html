@@ -1,0 +1,44 @@
+<header class="modifiers-list__header">
+  <h5 *ngIf="catalogModifierLabelText">{{ catalogModifierLabelText }}</h5>
+  <h5 *ngIf="modifier.PageInfo as groupTitle">{{ groupTitle.TitleDictionary ?
+    (groupTitle.TitleDictionary | dotTitleTranslate) : groupTitle.Title }}</h5>
+</header>
+<ng-container *ngIf="!isComplementModifier && displayModifierButtons">
+  <section class="flex flex--column">
+    <div class="products--grid auto--columns centered" [ngClass]="{ 'dual-modifiers': isDualModifiers }">
+      <acr-button-modifier
+        #buttonModifier
+        *ngFor="let modifierButton of modifier.Buttons | catalogButtonAvailability; let i = index"
+        [modifierButton]="modifierButton"
+        (selectedModifiers)="selectModifiers($event, modifier, i)"
+        [maxQuantityGroup]="modifier.PageInfo.MaxQuantity"
+        [minQuantityGroup]="modifier.PageInfo.MinQuantity"
+        [getQuantityButtons]="getQuantityButtons"
+        [isBucketStandard]="isBucketStandard"
+        [chargeThresholdGroup]="chargeThresholdGroup"
+        [isButtonChanged]="isButtonChanged"
+        (quantityChanged)="bucketStandard($event, modifierButton, modifier)"
+        [isSubgroupChecked]="verifySubgroupWasOpened(i)"
+      ></acr-button-modifier>
+    </div>
+  </section>
+</ng-container>
+
+<ng-container *ngIf="isComplementModifier && displayModifierButtons">
+  <section class="flex flex--column">
+    <acr-collapsible
+      *ngIf="extraButtons.length > 0"
+      [buttons]="extraButtons"
+      [complementModifier]="modifier"
+      [isExtraButton]="true"
+      [chargeThresholdGroup]="chargeThresholdGroup"
+    ></acr-collapsible>
+    <acr-collapsible
+      *ngIf="simpleButtons.length > 0"
+      [buttons]="simpleButtons"
+      [complementModifier]="modifier"
+      [isExtraButton]="false"
+      [chargeThresholdGroup]="chargeThresholdGroup"
+    ></acr-collapsible>
+  </section>
+</ng-container>

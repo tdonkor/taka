@@ -1,0 +1,50 @@
+<div [@popupOut]  class="popup popup--wizardType">
+    <div [@popupIn] class="content">
+      <div class="main-grid">
+        <!-- <div class="col-1-17 row-3-5 flex flex--column center justify--end">
+          <h3 class="title">subgroups</h3>
+        </div> -->
+        <div class="col-1-17 row-2-5 flex flex--column center justify--end modifiers-list__header">
+          <h5 class="title" >{{'2021071301' | dotTranslate}}</h5>
+          <h5 class="title" *ngIf="subgroupModifiers?.Caption">{{subgroupModifiers.Caption}}</h5>
+          <h5 class="title" *ngIf='displayText'>{{'73' | dotTranslate}}</h5>
+        </div>  
+        <div class="col-1-17 row-7-28 flex flex--column">
+          <div class="scrollY full hideScrollbar">
+            <div class="modifiers-list withoutHeader">
+              <div class="products--grid auto--columns centered">
+                <acr-button-modifier *ngFor='let modifierButton of subgroupModifiers.Page.Buttons' 
+                [modifierButton]='modifierButton'
+                (selectedModifiers)='selectModifiers($event, modifier)'
+                [maxQuantityGroup]='modifier.PageInfo.MaxQuantity'
+                [minQuantityGroup]='modifier.PageInfo.MinQuantity' 
+                [getQuantityButtons]='getQuantityButtons'
+                [isBucketStandard]="isBucketStandard"
+                [chargeThresholdGroup]='chargeThresholdGroup'
+                [isButtonChanged]="isButtonChanged"
+                (quantityChanged)='bucketStandard($event, modifierButton, modifier)'
+              >
+              </acr-button-modifier> 
+              </div>
+            </div>  
+          </div>
+        </div>
+  
+        <div class="actions col-1-17 row-28-31">
+          <button class="ui-button primary small" (click)='close()' [attr.aria-label]="'No thanks Subgroup'">
+            <span class="ui-button__wrapper">
+              <span>{{ '26' | dotTranslate}}</span>
+            </span>
+          </button>
+          <button class="ui-button secondary iconRight small" (click)='close()' [attr.aria-label]="'Finish choosing Subgroups'">
+            <span class="ui-button__wrapper">
+              <svg class="lib-icon size--20">
+                <use href="#lib-icon--chevron-right"></use>
+              </svg>
+              <span>{{ '71' | dotTranslate}}</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

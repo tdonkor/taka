@@ -1,0 +1,52 @@
+[
+	{
+		"ID": 12,
+		"Name": "Banner 1 WITH GRILL",
+		"Image": "banner_GRILL VERTICAL.jpg",
+		"Active": true,
+		"Interval": 7000,
+		"Order": 10,
+		"Skin": "FullHD",
+		"BannerType": "Slide"
+	},
+	{
+		"ID": 13,
+		"Name": "Banner 2 WITH MAGIC ROLL",
+		"Image": "banner_MAGIC ROLL VERTICAL.jpg",
+		"Active": true,
+		"Interval": 7000,
+		"Order": 11,
+		"Skin": "FullHD",
+		"BannerType": "Slide"
+	},
+	{
+		"ID": 14,
+		"Name": "Banner 3 WITH MEAL DEAL",
+		"Image": "banner_MEAL DEAL VERTICAL.jpg",
+		"Active": true,
+		"Interval": 7000,
+		"Order": 12,
+		"Skin": "FullHD",
+		"BannerType": "Slide"
+	},
+	{
+		"ID": 13,
+		"Name": "Banner 2 WITH ORIGINALS",
+		"Image": "banner_ORIGINALS VERTICAL.jpg",
+		"Active": true,
+		"Interval": 7000,
+		"Order": 11,
+		"Skin": "FullHD",
+		"BannerType": "Slide"
+	},
+	{
+		"ID": 14,
+		"Name": "Banner 3 WITH SIDES",
+		"Image": "banner_SIDES VERTICAL.jpg",
+		"Active": true,
+		"Interval": 7000,
+		"Order": 12,
+		"Skin": "FullHD",
+		"BannerType": "Slide"
+	}
+]

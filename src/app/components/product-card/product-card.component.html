@@ -1,0 +1,90 @@
+ <!-- edited card grid in _basket  -->
+ <div class="card basket--card" [ngClass]="{'promo--card' : basketButton.promoChildButtons}" [attr.aria-label]="'Basket Item'">
+  <!-- left column -->
+  <header *ngIf="!basketButton.promoChildButtons" class="card__header flex flex--column center">
+    <img class="card__img" [src]="buttonPicture" />
+    <h4 *ngIf="!skipPrecalculate || isLinkToParent">{{quantity}}x</h4>
+    <acr-buttons-counter-edit *ngIf="skipPrecalculate && !basketButton.isPromo && !isLinkToParent"
+      [quantity]="quantity"
+      (quantityUpdate)="onQuantityUpdate($event)"
+      [displayPrice]="false"
+    >
+    </acr-buttons-counter-edit>
+  </header>
+  <!-- right column  containing all contents-->
+  <div class="flex flex--column justify--between">
+    <div class="flex center justify--between">
+      <!-- left column  -->
+      <div>
+        <h3 class="card__title">{{ productTitle }}</h3>
+        <ul class="card__contents-list" *ngIf="hasExtraItems">
+          <li *ngFor="let item of extraItems">
+            <span *ngIf="item.quantity > 1 && !hasDefaultQuantity(item)">{{item.quantity}} x </span>
+            <span >{{ getProductNameWithPrefixes(item) | translatePrefixesName}}</span> 
+            <span *ngIf="item.quantity > 0 && !hasDefaultQuantity(item)"> {{ item | dotTranslateCaption}}</span>
+            <h5 class="display--inline-block" *ngIf="hasDefaultQuantity(item) && defaultQuantityLabel(item).length > 0"> {{defaultQuantityLabel(item)}}</h5>
+            <div class="ml--20 font--tertiary fs--20">{{getSelectedComboModifiers(item)}}</div>
+          </li>
+        </ul>
+      </div>
+      <!-- right column  -->
+      <div class="card__actions">
+        <button
+          class="ui-button primary small color--tertiary"
+          (click)="changeProduct(basketButton)"
+          [attr.aria-label]="'Button: Change'"
+          *ngIf="hasExtraItems && skipPrecalculate && displayButton">
+            {{ "18" | dotTranslate }}
+        </button>
+      <div *ngIf="hasExtraItems && skipPrecalculate" class="spacer--20"></div>
+      <button
+        class="ui-button primary small color--tertiary"
+        (click)="onRemoveClick(basketButton)" *ngIf="skipPrecalculate"
+        [attr.aria-label]="'Button: Remove'"
+      >
+        {{ "37" | dotTranslate }}
+      </button>
+      </div>
+    </div>
+
+    <!-- link to parent subcard -->
+    <div *ngIf="childButtons.length > 0" class="subcard">
+      <div class="subcard__item" *ngFor="let child of childButtons">
+        <img class="subcard__item-image" [src]="child | translatePicture">
+        <div class="subcard__item-product">
+          <header class="subcard__item-header">
+            <span class="subcard__item-quantity" *ngIf="!child.isPromo && child.quantity > 1">{{child.quantity}}x</span> 
+            <span class="subcard__item-title">{{ child | dotTranslateCaption }}</span>
+            <span class="subcard__item-price font--secondary">{{ child.Price | dotCurrency }}</span>
+          </header>
+          <ul class="subcard__item-modifiers">
+            <li class="subcard__item-modifier" *ngFor="let modifierButton of getChildModifierButtons(child); let i = index">
+              <span class="subcard__item-modifier--quantity" *ngIf="modifierButton.quantity > 1">{{ modifierButton.quantity }}x </span>
+              <span class="subcard__item-modifier--title">{{ modifierButton | dotTranslateCaption}}</span>
+              <span *ngIf="i < getChildModifierButtons(child).length - 1">, &nbsp;</span>
+            </li>
+          </ul>
+        </div>
+        <div class="subcard__actions">
+          <button  
+            class="ui-button primary tiny color--tertiary pl--40 fs--22"
+            (click)="onRemoveClick(child)"
+            [attr.aria-label]="'Button: Remove'"
+            *ngIf="!child.isPromo && skipPrecalculate">
+              {{ "2021041901" | dotTranslate }}
+          </button>
+          <button  
+            class="ui-button primary tiny color--tertiary pl--40 fs--22"
+            (click)="changeProduct(child)"
+            [attr.aria-label]="'Button: Change'"
+            *ngIf="displayChildChange(child)">
+              {{ "18" | dotTranslate }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- link to parent subcard end-->
+    
+    <h5 class="card__price p--20">{{ formattedPrice }}</h5>
+  </div>
+</div>

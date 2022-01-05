@@ -1,0 +1,1707 @@
+[
+	{
+		"ID": "1",
+		"FR": "menu",
+		"EN": "menu",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2",
+		"FR": "calories",
+		"EN": "calories",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "3",
+		"FR": "allergènes",
+		"EN": "allergens",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "4",
+		"FR": "j'ai un code promo",
+		"EN": "i have a voucher",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "5",
+		"FR": "annuler",
+		"EN": "cancel order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "6",
+		"FR": "vide",
+		"EN": "no item",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "7",
+		"FR": "commande",
+		"EN": "your order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "8",
+		"FR": "confirmer la commande",
+		"EN": "confirm order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "9",
+		"FR": "retour",
+		"EN": "back",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "10",
+		"FR": "bienvenue",
+		"EN": "welcome",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "11",
+		"FR": "sur place",
+		"EN": "eat in",
+		"it": "MANGIA QUI",
+		"es": "Comer aquí",
+		"de": "Hier essen",
+		"ar": "كل هنا",
+		"zh": "堂食",
+		"pl": "Na miejscu"
+	},
+	{
+		"ID": "12",
+		"FR": "à emporter",
+		"EN": "take out",
+		"it": "Da asporto",
+		"es": "Para llevar",
+		"de": "Mitnehmen",
+		"ar": "يبعد",
+		"zh": "外带",
+		"pl": "Na wynos"
+	},
+	{
+		"ID": "13",
+		"FR": "choisir la langue",
+		"EN": "choose language",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "14",
+		"FR": "commander",
+		"EN": "order here",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "15",
+		"FR": "touchez pour commander",
+		"EN": "touch to order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "16",
+		"FR": "retour",
+		"EN": "go back",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "17",
+		"FR": "payer la commande",
+		"EN": "pay order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "18",
+		"FR": "modifier",
+		"EN": "change",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "19",
+		"FR": "item",
+		"EN": "item",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": "",
+		"Def": "item"
+	},
+	{
+		"ID": "20",
+		"FR": "sandwich",
+		"EN": "sandwich",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "21",
+		"FR": "accompagnements",
+		"EN": "sides",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "22",
+		"FR": "boissons",
+		"EN": "drinks",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "23",
+		"FR": "annuler",
+		"EN": "cancel",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "24",
+		"FR": "fermer",
+		"EN": "close",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "25",
+		"FR": "réinitialiser",
+		"EN": "reset filter",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "26",
+		"FR": "annuler",
+		"EN": "cancel",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": "",
+		"Def": "Cancel"
+	},
+	{
+		"ID": "27",
+		"FR": "ajouter au panier",
+		"EN": "add to bag",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": "",
+		"Def": "Add to bag"
+	},
+	{
+		"ID": "28",
+		"FR": "continuer",
+		"EN": "continue",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": "",
+		"Def": "Continue"
+	},
+	{
+		"ID": "29",
+		"FR": "suivez les instruction du terminal",
+		"EN": "please follow the instruction on the terminal display",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "30",
+		"FR": "le paiement a échoué",
+		"EN": "payment failed",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "31",
+		"FR": "voulez-vous réessayer",
+		"EN": "do you want to retry",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "32",
+		"FR": "non",
+		"EN": "no",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "33",
+		"FR": "oui",
+		"EN": "yes",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "34",
+		"FR": "commande numéro",
+		"EN": "your order number is",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "35",
+		"FR": "veuillez récupérer votre commande au point de retrait",
+		"EN": "please pick up your order from the collection point",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "36",
+		"FR": "merci",
+		"EN": "thank you",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "37",
+		"FR": "supprimer",
+		"EN": "delete",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "38",
+		"FR": "voulez-vous vraiment supprimer votre commande",
+		"EN": "do you really want to cancel your order ?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "39",
+		"FR": "attention, ce produit contient des allergène",
+		"EN": "be careful, this product contains allergens",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "40",
+		"FR": "veuillez entrer votre code promo",
+		"EN": "please type your voucher code",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "41",
+		"FR": "ajouter pour +",
+		"EN": "add for +",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "42",
+		"FR": "petit menu",
+		"EN": "small meal",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "43",
+		"FR": "menu",
+		"EN": "medium meal",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "44",
+		"FR": "menu xl",
+		"EN": "large meal",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "45",
+		"FR": "sandwich seul",
+		"EN": "sandwich only",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "46",
+		"FR": "ajouté",
+		"EN": "added",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "47",
+		"FR": "Votre commande a échoué, voulez-vous rééssayer?",
+		"EN": "Your order fails, do you want to retry?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "48",
+		"FR": "personnalisez",
+		"EN": "customize",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "49",
+		"FR": "votre",
+		"EN": "your",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "50",
+		"FR": "Nombre maximum de suppléments atteint",
+		"EN": "Maximum number of ingredients reached",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "51",
+		"FR": "avec",
+		"EN": "with",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "52",
+		"FR": "Votre paiement a échoué, voulez-vous rééssayer?",
+		"EN": "Your payment failed, do you want to retry?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "53",
+		"FR": "Une erreur est survenue durant le paiement, voulez-vous rééssayer ?",
+		"EN": "An error occurred during the payment, do you want to retry?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "54",
+		"FR": "Erreur lors du chargement de la commande",
+		"EN": "Error loading order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "55",
+		"FR": "Êtes vous toujours ici ?",
+		"EN": "Are you still here?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "56",
+		"FR": "La connection au POS a échoué",
+		"EN": "POS connection failed",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "57",
+		"FR": "Recommencer",
+		"EN": "Start Over",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "58",
+		"FR": "Veuillez vous rendre au comptoir",
+		"EN": "Please go to the counter",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "59",
+		"FR": "Pour prendre votre commande",
+		"EN": "To pick your order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "60",
+		"FR": "Choisissez votre paiement",
+		"EN": "Choose your payment",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "61",
+		"FR": "Carte de crédit",
+		"EN": "Credit Card",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "62",
+		"FR": "Comptoir",
+		"EN": "Counter",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "63",
+		"FR": "total",
+		"EN": "total",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "64",
+		"FR": "Voir plus d'options",
+		"EN": "View more options",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "65",
+		"FR": "Cal",
+		"EN": "Cal",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "66",
+		"FR": "Choisissez votre quantité",
+		"EN": "Choose your quantity",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "67",
+		"FR": "Autre chose ?",
+		"EN": "Anything else?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "68",
+		"FR": "Code invalide",
+		"EN": "Invalid code",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "69",
+		"FR": "Nombre maximum de promotion atteint",
+		"EN": "Maximum promotions of this type reached",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "70",
+		"FR": "Réessayer",
+		"EN": "Retry",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "71",
+		"FR": "Confirmer",
+		"EN": "Confirm",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "72",
+		"FR": "Non merci",
+		"EN": "No thanks",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "73",
+		"FR": "Quantité maximum de suppléments atteinte",
+		"EN": "Maximum amount of supplements reached",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "74",
+		"FR": "Voulez-vous etre servi a votre table ?",
+		"EN": "Would you like to be served at your table?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "75",
+		"FR": "Oui s'il-vous-plait",
+		"EN": "Yes please",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "76",
+		"FR": "Composez le numéro du ticket",
+		"EN": "Enter your number below",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "77",
+		"FR": "Reset",
+		"EN": "Clear",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "78",
+		"FR": "Confimer",
+		"EN": "Confirm",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "79",
+		"FR": "Prenez un ticket",
+		"EN": "Pick up a flag from the dispenser",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "80",
+		"FR": "Numéro de ticket invalide",
+		"EN": "Invalid tent number",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "81",
+		"FR": "Veuillez vous rendre au comptoir avec le ticket de commande et celui de la table",
+		"EN": "Go to the counter with your ticket and your flag to pickup your order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "82",
+		"FR": "Le service a la table est temporairement indisponible",
+		"EN": "Table service is momentarily unavailable",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "83",
+		"FR": "Placez le ticket sur votre table",
+		"EN": "Place the flag and your ticket on the table",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "84",
+		"FR": "Nous vous apportons votre commande",
+		"EN": "We will bring your order in a instant",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "85",
+		"FR": "Suggestions",
+		"EN": "Recommendations",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "86",
+		"FR": "Ou",
+		"EN": "Or",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "87",
+		"FR": "Entrez votre code promo",
+		"EN": "Type your voucher code",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "88",
+		"FR": "Scannez votre code promo",
+		"EN": "Scan your voucher",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "89",
+		"FR": "Veuillez scanner votre code promo",
+		"EN": "Please scan your voucher",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "90",
+		"FR": "Le scanner est momentanement hors-service",
+		"EN": "The scanner is temporarily unavailable",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "91",
+		"FR": "Le bon est invalide",
+		"EN": "The voucher is invalid",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "92",
+		"FR": "",
+		"EN": "ITEMS",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "93",
+		"FR": "",
+		"EN": "Your order is sent to POS",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": "",
+		"Def": "Your order is sent to POS"
+	},
+	{
+		"ID": "94",
+		"FR": "Your basket is empty fr",
+		"EN": "Your basket is empty",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": "",
+		"Def": "Your basket is empty"
+	},
+	{
+		"ID": "2020101408",
+		"EN": "-Scanner unavailable-",
+		"def": "-Scanner unavailable-"
+	},
+	{
+		"ID": "2020101403",
+		"EN": "-Generic printer error-",
+		"def": "-Generic printer error-"
+	},
+	{
+		"ID": "2020101601",
+		"EN": "-POS connection error-",
+		"def": "-POS connection error-"
+	},
+	{
+		"ID": "2020122101",
+		"Def": "Kiosk self-ordering is currently not available. We apologize for the inconvenience. Please proceed to the Full Service Counter to place your order."
+	},
+	{
+		"ID": "2020121703",
+		"FR": "",
+		"EN": "PAYMENT PROGRESS",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2020121701",
+		"FR": "",
+		"EN": "Sending order to the kitchen",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2020121702",
+		"FR": "",
+		"EN": "Please Wait",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2020122102",
+		"FR": "Are you sure you want to remove %PRODUCT_NAME% from the basket? (fr)",
+		"EN": "Are you sure you want to remove %PRODUCT_NAME% from the basket?",
+		"Def": "Are you sure you want to remove %PRODUCT_NAME% from the basket?"
+	},
+	{
+		"ID": "2021012501",
+		"EN": "SOMETHING EXTRA?",
+		"Def": "SOMETHING EXTRA?"
+	},
+	{
+		"ID": "2021012601",
+		"FR": "attention, ce produit contient des allergène",
+		"EN": "be careful, this product may contains allergens",
+		"Def": "be careful, this product may contains allergens",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "20210201001",
+		"FR": "",
+		"EN": "do you really want to cancel your menu ?",
+		"Def": "do you really want to cancel your menu ?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "20210204001",
+		"FR": "",
+		"EN": "Sorry an has error occurred Please place your order at the counter",
+		"Def": "Sorry an has error occurred Please place your order at the counter",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "20210208001",
+		"FR": "",
+		"EN": "Go to the counter to pay for your order with the flag and your ticket.",
+		"Def": "Go to the counter to pay for your order with the flag and your ticket.",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "20210208002",
+		"FR": "",
+		"EN": "Please go to the counter to pick up your order",
+		"Def": "Please go to the counter to pick up your order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021020901",
+		"FR": "",
+		"EN": "Are you there?",
+		"Def": "Are you there?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021020902",
+		"FR": "",
+		"EN": "continue order",
+		"Def": "continue order",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021020401",
+		"Def": "Welcome to Burger King"
+	},
+	{
+		"ID": "2021020402",
+		"Def": "Store code:"
+	},
+	{
+		"ID": "2021020501",
+		"Def": "Your order is paid",
+		"EN": "Your order is paid",
+		"ES": "Your order is paid",
+		"FR": "Your order is paid",
+		"DE": "Your order is paid",
+		"IT": "Your order is paid"
+	},
+	{
+		"ID": "2021020502",
+		"Def": "but not submitted for preparation.|Please see crew member at front counter|to prepare/complete your order"
+	},
+	{
+		"ID": "2021020503",
+		"Def": "Tax"
+	},
+	{
+		"ID": "2021020504",
+		"Def": "Subtotal"
+	},
+	{
+		"ID": "2021020801",
+		"Def": "Order not paid|Please see crew member at front counter|to complete your order"
+	},
+	{
+		"ID": "2021020905",
+		"Def": "****************************************"
+	},
+	{
+		"ID": "2021020906",
+		"Def": "****************************************"
+	},
+	{
+		"ID": "2021020903",
+		"Def": "****************************************|Thank You. Come Back Again."
+	},
+	{
+		"ID": "2021020904",
+		"Def": "------------- Check Closed -------------"
+	},
+	{
+		"ID": "2021021901",
+		"Def": "Glory cash"
+	},
+	{
+		"ID": "2021022401",
+		"EN": "Due to legal requirements, you cannot pay with cash over %%%. Your order amount to be paid with cash will be limited to this value. The rest of the order can be paid with another method of payment.",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": ""
+	},
+	{
+		"ID": "2021022402",
+		"EN": "Amount refunded: ",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Amount refunded: "
+	},
+	{
+		"ID": "2021022403",
+		"EN": "Your refund was processed. |Please take your cash and proceed with your order.",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Your refund was processed. |Please take your cash and proceed with your order. "
+	},
+	{
+		"ID": "2021022404",
+		"EN": "Your refund is in the works. |Please wait for your transaction to be processed. |Don't forget to take your change.",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Your refund is in the works. |Please wait for your transaction to be processed. |Don't forget to take your change."
+	},
+	{
+		"ID": "2021022405",
+		"EN": "Refund has failed. |Your order will still be processed. |Please collect change due at front counter.",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Refund has failed. |Your order will still be processed. |Please collect change due at front counter."
+	},
+	{
+		"ID": "2021022406",
+		"EN": "Coins and bills $20 or smaller are accepted.",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Coins and bills $20 or smaller are accepted."
+	},
+	{
+		"ID": "2021022407",
+		"EN": "Total amount owed:",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Total amount owed:"
+	},
+	{
+		"ID": "2021022408",
+		"EN": "Inserted cash:",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Inserted cash:"
+	},
+	{
+		"ID": "2021022409",
+		"EN": "Amount due:",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Amount due:"
+	},
+	{
+		"ID": "2021022410",
+		"EN": "Please insert cash",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Please insert cash"
+	},
+	{
+		"ID": "2021022411",
+		"EN": "An error has occured on the cash machine. |Please see a crew member for help or print receipt for a refund at the front counter.",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "An error has occured on the cash machine. |Please see a crew member for help or print receipt for a refund at the front counter."
+	},
+	{
+		"ID": "2021022412",
+		"EN": "Finish With Other Payment Method",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Finish With Other Payment Method"
+	},
+	{
+		"ID": "2021022413",
+		"EN": "Print Receipt",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Print Receipt"
+	},
+	{
+		"ID": "2021022501",
+		"EN": "Cash Paid:",
+		"ES": "",
+		"FR": "",
+		"DE": "",
+		"IT": "",
+		"Def": "Cash Paid:"
+	},
+	{
+		"ID": "2021022502",
+		"Def": "Your refund amount will be printed.|Please take your receipt to front counter|for full refund.",
+		"EN": "Your refund amount will be printed.|Please take your receipt to front counter|for full refund."
+	},
+	{
+		"ID": "2021022503",
+		"EN": "Change due:",
+		"Def": "Change due:"
+	},
+	{
+		"ID": "2021022504",
+		"Def": "Refund failed.|You may complete the transaction with|another form of payments, or print|receipt for a cash refund at the front|counter",
+		"EN": "Refund failed.|You may complete the transaction with|another form of payments, or print|receipt for a cash refund at the front|counter"
+	},
+	{
+		"ID": "2021022601",
+		"EN": "TOTAL TO PAY:",
+		"Def": "TOTAL TO PAY:",
+		"ES": "TOTAL A PAGAR",
+		"IT": "TOTALE DA PAGARE"
+	},
+	{
+		"ID": "2021022602",
+		"FR": "",
+		"EN": "do you really want to cancel your payment ?",
+		"Def": "do you really want to cancel your payment ?",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021030101",
+		"Def": "Card Paid:"
+	},
+	{
+		"ID": "2021030102",
+		"Def": "Payment: "
+	},
+	{
+		"ID": "2021030103",
+		"Def": "Paid with cash machine:"
+	},
+	{
+		"ID": "2021030104",
+		"Def": "Refunded:"
+	},
+	{
+		"ID": "2021030105",
+		"Def": "Failed to refund:"
+	},
+	{
+		"ID": "2021030106",
+		"Def": "Change failure.|Your order was sent to the kitchen.|Please take your receipt to Pick-Up|counter to collect remaining change|and your order."
+	},
+	{
+		"ID": "2021030107",
+		"Def": "Transaction incomplete. Please take|receipt to Pick-Up counter| to collect refund."
+	},
+	{
+		"ID": "2021031101",
+		"Def": "-POS connection error-"
+	},
+	{
+		"ID": "2021031102",
+		"Def": "This Kiosk is not available.|Use another Kiosk for your order."
+	},
+	{
+		"ID": "2021032201",
+		"Def": "Payback card"
+	},
+	{
+		"ID": "2021032202",
+		"Def": "The fiscal transaction fail."
+	},
+	{
+		"ID": "20210401001",
+		"FR": "",
+		"EN": "Not available",
+		"Def": "Not available",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+  {
+    "ID": "2021040201",
+    "FR": "",
+    "EN": "Do you want to make it a meal ?",
+    "Def": "Do you want to make it a meal ?",
+    "it": "",
+    "es": "",
+    "de": "",
+    "ar": "",
+    "zh": "",
+    "pl": ""
+  },
+    {
+    "ID": "2021040601",
+    "FR": "",
+    "EN": "Maximum amount is reached",
+    "Def": "Maximum amount is reached",
+    "it": "",
+    "es": "",
+    "de": "",
+    "ar": "",
+    "zh": "",
+    "pl": ""
+  },
+	{
+    "ID": "2020012202",
+    "FR": "",
+    "EN": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of  (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32.",
+    "Def": "",
+    "it": "",
+    "es": "",
+    "de": "",
+    "ar": "",
+    "zh": "",
+    "pl": ""
+  },	
+	{
+    "ID": "2020012203",
+    "FR": "",
+    "EN": "More info",
+    "Def": "More info",
+    "it": "",
+    "es": "",
+    "de": "",
+    "ar": "",
+    "zh": "",
+    "pl": ""
+  },
+  {
+	"ID": "20210504001",
+	"FR": "OFF",
+	"EN": "OFF",
+	"Def": "OFF",
+	"it": "",
+	"es": "",
+	"de": "",
+	"ar": "",
+	"zh": "",
+	"pl": ""
+	},
+  {
+    "ID": "2021041901",
+    "FR": "",
+    "EN": "Remove",
+    "Def": "Remove",
+    "it": "",
+    "es": "",
+    "de": "",
+    "ar": "",
+    "zh": "",
+    "pl": ""
+  },
+	{
+		"ID": "2021051001",
+		"FR": "Sup. +",
+		"EN": "Add. +",
+		"it": "Add. +",
+		"es": "Sup. +",
+		"de": "Zuschlag +",
+		"ar": "",
+		"zh": "補充 +",
+		"pl": ""
+	},
+	{
+	"ID": "20210504002",
+	"FR": "The coupon was applied",
+	"EN": "The coupon was applied",
+	"Def": "The coupon was applied",
+	"it": "",
+	"es": "",
+	"de": "",
+	"ar": "",
+	"zh": "",
+	"pl": ""
+	},
+	{
+	"ID": "20210504003",
+	"FR": "Ok",
+	"EN": "Ok",
+	"Def": "Ok",
+	"it": "",
+	"es": "",
+	"de": "",
+	"ar": "",
+	"zh": "",
+	"pl": ""
+	},
+	{
+	"ID": "20210504004",
+	"FR": "Discount",
+	"EN": "Discount",
+	"Def": "Discount",
+	"it": "",
+	"es": "",
+	"de": "",
+	"ar": "",
+	"zh": "",
+	"pl": ""
+	},
+	{
+	"ID": "2021050701",
+	"EN": "do you want to cancel your promotion?",
+	"Def": "do you want to cancel your promotion?",
+	"it": "",
+	"es": "",
+	"de": "",
+	"ar": "",
+	"zh": "",
+	"pl": ""
+	},
+	{
+	"ID": "2021050702",
+	"EN": "Step",
+	"Def": "Step",
+	"it": "",
+	"es": "",
+	"de": "",
+	"ar": "",
+	"zh": "",
+	"pl": ""
+		},
+    {
+    "ID": "20210504005",
+    "FR": "The previous order discount will be replaced",
+    "EN": "The previous order discount will be replaced",
+    "Def": "The previous order discount will be replaced",
+    "it": "",
+    "es": "",
+    "de": "",
+    "ar": "",
+    "zh": "",
+    "pl": ""
+    },
+	{
+	"ID": "20210517001",
+	"FR": "Nombre maximum de promotion atteint",
+	"EN": "Maximum number of promotions per order reached",
+	"it": "",
+	"es": "",
+	"de": "",
+	"ar": "",
+	"zh": "",
+	"pl": ""
+	},
+	{
+		"ID": "2021060201",
+		"FR": "",
+		"EN": "Without",
+		"Def": "Without",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021060202",
+		"FR": "",
+		"EN": "Extra",
+		"Def": "Extra",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021060203",
+		"FR": "",
+		"EN": "Remove",
+		"Def": "Remove",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021060204",
+		"FR": "",
+		"EN": "/",
+		"Def": "/",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021071301",
+		"FR": "",
+		"EN": "Choose from",
+		"Def": "Choose from",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+		
+	},
+	{
+		"ID": "2021081801",
+		"FR": "",
+		"EN": "Scroll Up",
+		"Def": "Scroll Up",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	},
+	{
+		"ID": "2021081802",
+		"FR": "",
+		"EN": "Scroll Down",
+		"Def": "Scroll Down",
+		"it": "",
+		"es": "",
+		"de": "",
+		"ar": "",
+		"zh": "",
+		"pl": ""
+	}
+]

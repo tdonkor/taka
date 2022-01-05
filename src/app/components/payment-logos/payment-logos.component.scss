@@ -1,0 +1,17 @@
+.payment-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40rem 20rem;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 40rem;
+  pointer-events: none;
+
+  img {
+    margin: 0 20rem;
+    max-width: 80rem;
+  }
+}

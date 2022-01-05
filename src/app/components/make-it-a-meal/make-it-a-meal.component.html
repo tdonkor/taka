@@ -1,0 +1,26 @@
+<div [@popupOut] *ngIf="!exitAnimation" class="popup popup--wizardType">
+  <div [@popupIn] class="content height70">
+    <div class="main-grid">
+      <section class="col-1-17 row-1-6 flex flex--column center">
+        <h2 class="text--center p--30">{{ '2021040201' | dotTranslate}}</h2>
+      </section>
+      <section class="col-2-16 row-6-28 flex flex--column scrollY hideScrollbar">
+        <div class="products--grid makeItAMeal">
+          <button class="product" *ngFor="let button of buttons" (click)="selectedMeal(button)"
+            [attr.aria-label]="'Make it a meal Button'">
+            <img class="product__img" [src]="button | makeItAMealPicture">
+            <h4 class="product__title">{{ button | makeItAMealTitle }}</h4>
+            <h4 class="product__price">{{ button | makeItAMealPrice }}</h4>
+          </button>
+        </div>
+      </section>
+      <footer class="actions flex center col-1-17 row-28-31">
+        <button class="ui-button primary small" (click)="closeModal('No')" [attr.aria-label]="'No thanks Button'">
+          <span class="ui-button__wrapper">
+            <span>{{ '72' | dotTranslate}}</span>
+          </span>
+        </button>
+      </footer>
+    </div>
+  </div>
+</div>

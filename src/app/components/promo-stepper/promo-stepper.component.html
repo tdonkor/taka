@@ -1,0 +1,53 @@
+<div [@popupOut] *ngIf="!exitAnimation" class="popup popup--combo">
+  <div [@popupIn] class="content height70">
+    <div class="main-grid">
+      
+      <div class="col-1-17 row-1-8">
+				<header class="full flex flex--column center p--20">
+					<h3 class="text--center">{{ currentPage.TitleDictionary ? (currentPage.TitleDictionary | dotTitleTranslate) : currentPage.Title }}</h3>
+          <button *ngIf="promosService.promoNode.back"
+                  class="ui-button primary bg--tertiary tiny iconLeft mt--30"
+                  (click)='previousStep()'
+                  [attr.aria-label]="'Promo Back Button'">
+            <span class="ui-button__wrapper">
+              <svg class="lib-icon size--20"><use href="#lib-icon--chevron-left"></use></svg>
+              <span>{{ '9' | dotTranslate }}</span>
+            </span>
+          </button>
+				</header>
+      </div>
+
+      <div class="flex flex--column scrollY hideScrollbar" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-8-28' : 'col-1-17 row-8-26'">
+        <div class="grid products--grid cols--3">
+          <acr-button-modifier *ngFor="let button of promoButtons | catalogButtonAvailability"
+                                [isDisabled]="isButtonDisabled(button)"
+                                [modifierButton]="button"
+                                (selectedModifiers)="selectPromoButton($event)">
+          </acr-button-modifier>
+        </div>
+      </div>
+      
+      <div class="col-1-17 row-28-31" [ngClass]="!isAdaEnabled() ? 'row-28-31' : 'row-26-31'">
+        <div class="actions full">
+          <button class="ui-button primary small" (click)='cancelClick()' [attr.aria-label]="'Cancel Button'">
+            <span class="ui-button__wrapper">
+              <span>{{ '23' | dotTranslate}}</span>
+            </span>
+          </button>
+
+          <acr-steps *ngIf="steps.length > 1" class="stepper" [steps]="steps" [activeIndex]="currentStepIndex"></acr-steps>
+
+          <button [disabled]="disableNextStep" class="ui-button secondary iconRight small" (click)='nextStep()' [attr.aria-label]="'Continue Button'">
+            <span class="ui-button__wrapper">
+              <svg class="lib-icon size--20">
+                <use href="#lib-icon--chevron-right"></use>
+              </svg>
+              <span *ngIf="promosService.promoNode.next">{{ '28' | dotTranslate}}</span>
+              <span *ngIf="!promosService.promoNode.next" [ngClass]="{'fs--26' : isLastStep}">{{ '27' | dotTranslate}}</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.cod-view {
+  background: var(--primary);
+
+  &__total {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .total,
+    .price {
+      color: var(--secondary);
+    }
+  }
+
+  .product-card:last-child {
+    padding-bottom: 40rem;
+  }
+}

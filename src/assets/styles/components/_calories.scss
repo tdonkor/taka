@@ -1,0 +1,22 @@
+.popup--calories {
+  .content {
+    height: 90%;
+    max-height: 90%;
+  }
+
+  .actions {
+    position: relative;
+  }
+}
+
+.pagination {
+  position: absolute;
+  right: 0;
+
+  &__nr {
+    font-size: 40rem;
+    width: 60rem;
+    color: var(--white);
+    text-align: center;
+  }
+}

@@ -1,0 +1,54 @@
+:root {
+  --font-default: "Flama Black";
+  --font-secondary: "Flama Medium";
+  --font-light: "Flama Light";
+
+  // Primary colors / Brand Colors
+  //--primary: #252323;
+  --primary: rgb(251, 191, 19);
+  --secondary: #ffffff;
+  --icon-primary-color: #252323;
+  --icon-secondary-color: #ffffff;
+  --blue: #00b0f0;
+  --purple: #c153cb;
+  --green: #6bbe4e;
+  //--accent: #cbe510;
+  --accent: rgb(37, 69, 150);
+  --orange: #ee5b04;
+  --shadow: #00000080;
+  --tertiary: #252323;
+  --red: #dd0017;
+  --gray: #e5e5e5;
+  --white: #ffffff;
+  --dark-gray: #323231;
+  --light-gray: #b5b5b5;
+  --background-light-gray: #f0ece3;
+  --stepper-gray: #959595;
+  --stepper-gray-meter: #747474;
+  --background-gray: #f4f4f4;
+  --nav-slider-bg: var(--primary);
+  --pantone-blue: rgb(37, 69, 150);
+  --pantone-orange: rgb(231, 78, 15);
+
+  // Other
+  --spinner-color: #898989;
+  --box-shadow: 0 0 21rem 5rem rgba(204, 204, 204, 1);
+  --shadow-filter: drop-shadow(0 0 4rem rgba(85, 34, 34, 0.17));
+  --button-radius: 2rem;
+  --popup-bg: rgba(0, 0, 0, 0.65);
+  --banners-bg: #252323;
+
+  //rgba modifiers
+
+  /* same as --dark-gray but as rgba */
+  --dark-gray-opacity-5: rgba(50, 50, 49, 0.5);
+
+  // Backgrounds
+  --product-bg: url("/assets/images/product-bg.png");
+  --combo-bg: url("/assets/images/combo-bg.png");
+}
+
+// html[data-theme="dark"] {
+//   --primary-bg: #000000;
+//   --secondary-bg: #ffffff;
+// }

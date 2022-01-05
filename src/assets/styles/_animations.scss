@@ -1,0 +1,204 @@
+// Animations
+
+/**
+ * ----------------------------------------
+ * animation fadeIn
+ * ----------------------------------------
+ */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFwd {
+  0% {
+    opacity: 0;
+    transform: translateZ(-100rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+// Inactivity
+@keyframes handAnimate {
+  from {
+    transform: translateY(60%);
+  }
+}
+
+@keyframes bounceInFwd {
+  0% {
+    transform: scale(0);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  30% {
+    transform: scale(0.3);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  }
+
+  70% {
+    transform: scale(0.7);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: scale(0.8);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(1000rem);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBottomBack {
+  0% {
+    transform: translateY(1000rem);
+    opacity: 0.8;
+  }
+
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translateY(50rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-1000rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(1000rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleInHorCenter {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleInCenter {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bounceDown {
+  animation: bounceDown 1.4s infinite linear;
+}
+
+@keyframes bounceDown {
+  0% {
+    transform: translateY(20rem);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(20rem);
+  }
+}
+
+.rotateCenter {
+  animation: rotateCenter 2s infinite both;
+}
+
+@keyframes rotateCenter {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes keyStroke {
+  0% {
+    transform: scale(0.9);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}

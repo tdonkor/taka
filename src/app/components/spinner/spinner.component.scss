@@ -1,0 +1,73 @@
+.loading-spinner {
+  .circle {
+    width: 320rem;
+    height: 320rem;
+    border-radius: 50%;
+    background: var(--primary);
+
+    .lib-icon {
+      width: 200rem;
+      height: 200rem;
+    }
+  }
+
+  .svg-spinner {
+    width: 600rem;
+    height: 600rem;
+    position: absolute;
+    animation: rotate 1.4s infinite;
+    animation-timing-function: linear;
+
+    circle {
+      &:nth-child(1) {
+        opacity: 0.9;
+      }
+
+      &:nth-child(2) {
+        opacity: 0.8;
+      }
+
+      &:nth-child(3) {
+        opacity: 0.7;
+      }
+
+      &:nth-child(4) {
+        opacity: 0.6;
+      }
+
+      &:nth-child(5) {
+        opacity: 0.5;
+      }
+
+      &:nth-child(6) {
+        opacity: 0.4;
+      }
+
+      &:nth-child(7) {
+        opacity: 0.3;
+      }
+
+      &:nth-child(8) {
+        opacity: 0.2;
+      }
+
+      &:nth-child(9) {
+        opacity: 0.03;
+      }
+
+      &:nth-child(10) {
+        opacity: 0;
+      }
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

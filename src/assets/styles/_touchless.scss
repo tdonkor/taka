@@ -1,0 +1,15 @@
+// Disable touch actions for scrollable areas when Touchless is Enabled
+html.touchlessEnabled {
+  // .hideScrollbar is used on all containers that have scrollbars; this way we target them all.
+  .hideScrollbar {
+    touch-action: none;
+  }
+
+  .hideScrollbar:not(.nav-slider__container) {
+    scroll-behavior: auto;
+  }
+
+  .basket--card {
+    animation: none;
+  }
+}

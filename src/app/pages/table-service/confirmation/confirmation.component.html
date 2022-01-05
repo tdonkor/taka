@@ -1,0 +1,16 @@
+<div class="main-grid table-service">
+  <section class="col-1-17 row-1-10 flex flex--column center">
+    <img class="logo" src="./assets/branding/taka.PNG" alt="" />
+  </section>
+  <section class="flex flex--column center row-10-22" [ngClass]="!isAdaEnabled() ? 'col-2-16' : 'col-3-15'">
+    <div class="square full flex center justify--between">
+			<div class="grid cols--2">
+				<h3 class="color--white">{{ '83' | dotTranslate}}</h3>
+				<img class="table-service__flag" src="./assets/images/table-service-flag-receipt.png" alt="">
+			</div>
+    </div>
+  </section>
+	<section class="col-3-15 row-24-28 flex flex--column center">
+		<h2 class="text--center">{{ '84' | dotTranslate}}</h2>
+	</section>
+</div>

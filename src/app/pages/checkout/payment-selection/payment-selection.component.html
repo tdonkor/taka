@@ -1,0 +1,29 @@
+<div class="main-grid">
+  <section class="flex flex--column center" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-1-8' : 'col-1-17 row-1-6'">
+    <img class="logo" src="./assets/branding/takahead.PNG" alt="" />
+  </section>
+  <div class="flex flex--column align--center" [ngClass]="!isAdaEnabled() ? 'col-2-16 row-8-28' : 'col-5-13 row-6-27'">
+    <h3 class="m--20">{{ '2021022601' | dotTranslate }} <span class="fs--64 color--accent"><span>&nbsp;&nbsp;</span>{{ amountOwed | dotCurrency:true }}</span></h3>
+    <h3>{{ '60' | dotTranslate }}</h3>
+    <div class="payment-types" [ngClass]="{ 'cols--1' : availablePayments.length < 2 }" *ngIf="availablePayments && availablePayments.length > 0">
+      <button class="payment-type" *ngFor="let payment of availablePayments" [disabled]="isPaymentDisabled(payment)" (click)="orderPay(payment)" [attr.aria-label]="'Payment Type: ' + payment.PaymentType">
+        <img [src]="'./assets/images/' + payment.Image"/>
+        <div class="payment-type__text">
+          <h3 class="payment-name">{{ payment.DisplayName | dotTranslate }}</h3>
+          <svg class="lib-icon size--54 color--tertiary"><use href="#lib-icon--pill-chevron-right"></use></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+  <section class="flex center" [ngClass]="!isAdaEnabled() ? 'col-2-16 row-28-31' : 'col-2-16 row-27-31'">
+    <button
+      (click)="cancel()"
+      class="ui-button primary color--tertiary medium"
+      [attr.aria-label]="'Cancel Payment Selection'"
+    >
+      <span class="ui-button__wrapper">
+        <span>{{ "23" | dotTranslate }}</span>
+      </span>
+    </button>
+  </section>
+</div>

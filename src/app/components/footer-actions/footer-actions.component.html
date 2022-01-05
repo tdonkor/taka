@@ -1,0 +1,27 @@
+<div class="footer__left">
+  <button class="ui-button icon-button ada-button" [attr.aria-label]="'Accessibility Switcher'" (click)="switchAdaMode()">
+    <svg class="lib-icon size--84 color--pantone-blue"><use href="#lib-icon--ada"></use></svg>
+  </button>
+
+  <button class="ui-button primary iconLeft small"
+    [ngClass]="{'color--light-gray': leftBtnAriaLabel === 'Cancel Order Button'}"
+    (click)="leftButton($event)"
+    [attr.aria-label]="leftBtnAriaLabel">
+    <span class="ui-button__wrapper justify--around">
+      <svg class="lib-icon size--25">
+        <use [attr.href]=leftButtonIcon></use>
+      </svg>
+      <span>{{ leftBtnTranslate | dotTranslate}}</span>
+    </span>
+  </button>
+</div>
+
+<button class="ui-button secondary x-large iconRight"
+  (click)="rightButton($event)"
+  [disabled]="basketButtonsLength === orderDiscount"
+  [attr.aria-label]="rightBtnAriaLabel">
+  <span class="ui-button__wrapper">
+    <svg class="lib-icon size--20 ml--20"><use href="#lib-icon--chevron-right"></use></svg>
+    <span>{{ rightBtnTranslate | dotTranslate}}</span>
+  </span>
+</button>

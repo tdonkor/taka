@@ -1,0 +1,21 @@
+<div [@popupOut] *ngIf = "!exitAnimation" class="popup popup--confirm-dialog">
+  <div [@popupIn] class="content">
+    <h3 class="title" [innerHTML]="title"></h3>
+    <h3 class="title" *ngIf="button"> {{ button | translateDlgMessageDictionary}}</h3>
+    <div class="actions">
+      <button class="ui-button secondary small"
+      (click)="onControlsButtonsClick('No')" [attr.aria-label]="'Cancel Button'">
+        <span class="ui-button__wrapper">
+          <span>{{leftButtonText}}</span>
+        </span>
+      </button>
+
+      <button class="ui-button primary color--tertiary small"
+        (click)="onControlsButtonsClick('Yes')" [attr.aria-label]="'Confirm Button'">
+        <span class="ui-button__wrapper">
+          <span>{{rightButtonText}}</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>

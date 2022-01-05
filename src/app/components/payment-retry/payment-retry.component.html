@@ -1,0 +1,26 @@
+<div [@popupOut] *ngIf = "!exitAnimation" class="popup popup--confirm-dialog">
+  <div [@popupIn] class="content">
+    <div class="flex flex--column center">
+      <h3 class="title"> {{ title }} </h3>
+      <h1 class="big--heading color--accent m--40"> {{ counter }} </h1>
+      <h2 class="message"> {{ message }} </h2>
+    </div>
+    
+    <div class="actions">
+      <button class="ui-button primary color--tertiary small"
+      (click)="onControlsButtonsClick('No')" [attr.aria-label]="'Retry Button: No'">
+        <span class="ui-button__wrapper">
+          <span>{{leftButtonText}}</span>
+        </span>
+      </button>
+
+      <button class="ui-button primary bg--tertiary small" 
+        (click)="onControlsButtonsClick('Yes')" [attr.aria-label]="'Retry Button: Yes'">
+        <span class="ui-button__wrapper">
+          <span>{{rightButtonText}}</span>
+        </span>
+      </button>
+    </div>
+    
+  </div>
+</div>

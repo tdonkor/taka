@@ -1,0 +1,240 @@
+// Basket Styles
+.basket {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 342rem;
+  height: 73vh;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: unset;
+    padding: 180rem 50rem 50rem 50rem;
+  }
+
+  &__header {
+    min-height: 90rem;
+
+    button {
+      position: absolute;
+      left: 46rem;
+      top: 50rem;
+    }
+  }
+
+  &__contents {
+    display: grid;
+    grid-template-rows: 1030rem 1fr;
+    height: 100%;
+
+    &.hasScrollNav {
+      grid-template-rows: 900rem 120rem 1fr;
+
+      .scroll-nav {
+        margin: 0 -50rem;
+      }
+
+      .card-list {
+        .product-card:last-child {
+          padding-bottom: 40rem;
+        }
+      }
+    }
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .total,
+    .price {
+      color: var(--secondary);
+    }
+  }
+
+  .basket--card {
+    animation: slideInBottomBack 0.35s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+    animation-delay: 0.1s;
+  }
+}
+
+// Basket Opened Styles
+.basketOpened {
+  .footer {
+    position: static;
+  }
+
+  .footer__info {
+    position: absolute;
+    top: 230rem;
+    height: 112rem;
+    z-index: 1;
+  }
+
+  .footer__cart {
+    top: 15vh;
+    z-index: 11;
+    border-radius: 30rem;
+  }
+
+  .cart-icon--chevron {
+    transform: rotate(180deg) translateX(50%) !important;
+    transition: all 0.35s ease-in-out;
+  }
+}
+
+// Basket Cards list
+.card-list {
+  display: grid;
+  grid-auto-rows: min-content;
+  width: 100%;
+  height: 100%;
+  overflow-y: overlay;
+  grid-gap: 30rem;
+}
+
+// General basket card
+.card {
+  display: grid;
+  grid-template-columns: 240rem auto;
+  grid-gap: 30rem;
+  width: 100%;
+  height: 100%;
+  padding: 20rem;
+  background: var(--white);
+  color: var(--primary);
+  border-radius: 18rem;
+
+  &__img {
+    max-width: 154rem;
+  }
+
+  &__title {
+    font-size: 50rem;
+    padding-right: 20rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contents-list {
+    font-family: var(--font-secondary);
+    list-style-type: none;
+    margin: 0;
+    padding: 20rem 0;
+
+    li {
+      font-size: 24rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__actions {
+    align-self: flex-start;
+  }
+
+  &__price {
+    font-family: var(--font-secondary);
+    font-size: 42rem;
+    text-align: right;
+  }
+
+  .quantity-info__amount {
+    font-size: 50rem;
+    width: 80rem;
+  }
+
+  .quantity-info__actions {
+    padding: 10rem 0 0 0;
+  }
+
+  &.promo--card {
+    grid-template-columns: unset;
+    padding: 20rem 40rem;
+  }
+}
+
+// We use this subcard for LinkToParent & Promo Bogo
+.subcard {
+  background: var(--white);
+  filter: var(--shadow-filter);
+  border-radius: 18rem;
+  margin-top: 30rem;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap: 10rem;
+    align-items: center;
+    padding: 20rem;
+  }
+
+  &__item + &__item {
+    padding-top: 0;
+  }
+
+  &__item-image {
+    max-width: 80rem;
+  }
+
+  &__item-product {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-header {
+    display: flex;
+    align-items: center;
+    font-size: 28rem;
+    padding-bottom: 6rem;
+  }
+
+  &__item-modifiers {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+    flex-wrap: wrap;
+  }
+
+  &__item-quantity {
+    display: inline-block;
+    margin-right: 5rem;
+  }
+
+  &__item-modifier {
+    &--quantity {
+      padding-right: 4rem;
+    }
+
+    &--title {
+      padding-right: 4rem;
+      display: contents;
+    }
+  }
+
+  &__item-price {
+    display: inline-block;
+    margin-left: 10rem;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+}

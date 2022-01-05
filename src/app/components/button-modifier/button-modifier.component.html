@@ -1,0 +1,38 @@
+<div class="product product--modifier" [ngClass]="{'selected' : isSelected, 'hasChargeThreshold':
+      !hasChargeThreshold(), 'product--status-not-available': isButtonStatusUnavailable}">
+
+  <button (click)='!isButtonStatusUnavailable && selectModifiers(modifierButton)'
+          attr.aria-label="Button: {{ modifierButton | dotTranslateCaption }}"
+          [disabled]="isDisabled"
+          class="product__button">
+    <header class="product__header">
+      <h5 class="product__title">{{ modifierButton | dotTranslateCaption }}</h5>
+      <span class="product__subtitle">
+        <span [ngClass]="{'mr--10' : showPrice}" *ngIf="hasDefaultQuantity">{{ defaultQuantityLabel }}</span>
+        <span class="display--inline-block" *ngIf='showPrice'>
+          <span *ngIf="displayUpsizePrice">+</span>{{ displayPrice | dotCurrency}}
+        </span>
+      </span>
+    </header>
+    <img class="product__img" [src]="modifierButton | translatePicture" alt="">
+    <svg class="lib-icon modifier-checkmark size--56"><use href="#lib-icon--pill-checkmark"></use></svg>
+  </button>
+  <acr-buttons-counter-edit *ngIf='showButtonCounterEdit' [quantity]='quantity'
+    (quantityUpdate)="onQuantityUpdate($event)" [minQuantity]='minQuantity' [maxQuantity]='maxQuantity'
+    [prefixQuantity]="prefixQuantity" [hasPrefixes]="hasPrefixes" [basketExceededMaxQty]="basketExceededMaxQty"
+    [hasDefaultQuantity]="hasDefaultQuantity"
+    [isUnavailableButton]="isUnavailableButton">
+  </acr-buttons-counter-edit>
+  <ng-template [ngIf]="isButtonStatusUnavailable">
+    <div class="product__overlay-status-not-available">{{'20210401001' | dotTranslate}}</div>
+  </ng-template>
+
+
+  <ng-template [ngIf]="hasSubgroupsModifiers">
+    <div class="product__corner-ticket-wrapper">
+       <div class="ticket" [ngClass]="{'checked': isChecked}">
+       <span *ngIf="!isChecked" class="ripple" ></span>
+      </div>
+    </div>
+  </ng-template>
+</div>

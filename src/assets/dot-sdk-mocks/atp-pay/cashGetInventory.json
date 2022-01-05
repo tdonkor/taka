@@ -1,0 +1,16 @@
+[
+  {
+    "Location": "DispensableInventory",
+    "Value": 100,
+    "Piece": 10,
+    "Status": "NearEmpty",
+    "Type": "Bill"
+  },
+  {
+    "Location": "InternalInventory",
+    "Value": 100,
+    "Piece": 100,
+    "Status": "Green",
+    "Type": "Coin"
+  }
+]

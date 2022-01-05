@@ -1,0 +1,22 @@
+<div class="page--banners flex full">
+  <button class="slideshow-banner" [attr.aria-label]="'SSV Banner'">
+    <ng-container *ngIf="bannersService.showBanner">
+      <img *ngIf="bannersService.isCurrentBannerImage" class="slideshow__item full" [src]="bannersService.currentBannerSrc"/>
+      <video *ngIf="bannersService.isCurrentBannerVideo" class="slideshow__item full" [src]="bannersService.currentBannerSrc" type="video/webm" autoplay muted loop></video>
+    </ng-container>
+  </button>
+
+  <div class="slideshow__content">
+    <button *ngIf="isTouchToOrderButtonVisible" class="ui-button secondary x-large iconRight" [attr.aria-label]="'Button: Touch To Order'">
+      <span class="ui-button__wrapper">
+        <svg class="lib-icon size--20 ml--20">
+          <use href="#lib-icon--chevron-right"></use>
+        </svg>
+        <span>{{ '15' | dotTranslate }}</span>
+      </span>
+    </button>
+  </div>
+  
+  <acr-payment-logos></acr-payment-logos>
+  <acr-status></acr-status>
+</div>

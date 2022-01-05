@@ -1,0 +1,32 @@
+<div class="main-grid table-service">
+    <div class="flex flex--column center col-2-16" [ngClass]="!isAdaEnabled() ? 'row-1-6' : 'row-1-4'">
+      <h2 class="text--center">{{ '79' | dotTranslate }}</h2>
+    </div>
+    <section class="flex flex--column center col-1-17" [ngClass]="!isAdaEnabled() ? 'row-4-16' : 'row-4-14'">
+      <picture class="circle medium">
+        <img src="./assets/images/payment-selection--flag.png" alt="">
+      </picture>
+    </section>
+    <div class="flex flex--column center col-2-16" [ngClass]="!isAdaEnabled() ? 'row-16-27' : 'row-14-27'">
+      <h2 class="text--center">{{ '76' | dotTranslate }}</h2>
+      <acr-keyboard (inputChanged)="updateTableServiceNumber($event)" [keyboardLayout]="'numeric'"></acr-keyboard>
+    </div>
+    <div class="flex justify--center col-2-16" [ngClass]="!isAdaEnabled() ? 'row-27-30 ' : 'row-28-30'">
+      <button class="ui-button primary color--tertiary small"
+      (click)='cancel()'
+      [attr.aria-label]="'Confirm Table Service Button'">
+        <span class="ui-button__wrapper">
+          <span>{{ '23' | dotTranslate}}</span>
+        </span>
+      </button>
+      <div class="spacer--40"></div>
+      <button class="ui-button secondary small"
+            (click)='confirmTableServiceNumber()'
+            [attr.aria-label]="'Confirm Table Service Button'"
+            [disabled]="disableConfirmButton">
+        <span class="ui-button__wrapper">
+          <span>{{ '71' | dotTranslate}}</span> 
+        </span>
+      </button>
+    </div>
+  </div>

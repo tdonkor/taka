@@ -1,0 +1,17 @@
+<div class="full flex justify--around">
+  <div
+    *ngFor="let button of buttons"
+    class="dropdown-modifier"
+    (click)="select(button)"
+    [ngClass]="{'disabled': isButtonStatusUnavailable(button)}"
+  >
+    <h4>{{ getPrice(button) | dotCurrency }}</h4>
+    <img [src]="button | translatePicture" alt="" />
+    <button
+      class="ui-button primary color--tertiary tiny"
+      attr.aria-label="Button: {{ button | dotTranslateCaption }}"
+    >
+      {{ button | dotTranslateCaption }}
+    </button>
+  </div>
+</div>

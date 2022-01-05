@@ -1,0 +1,46 @@
+<div class="main-grid">
+  <section class="flex flex--column center" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-1-8' : 'col-1-17 row-1-5'">
+    <img class="logo" src="./assets/branding/taka.PNG" alt="" />
+  </section>
+  <div class="flex flex--column align--center" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-8-13' : 'col-1-17 row-8-14'">
+    <h3 class="m--20">{{ "2021022410" | dotTranslate }}</h3>
+    <div class="glory-cash-info">
+      <span class="glory-cash-info__message">
+        <span class="glory-cash-info__text">{{ "2021022407" | dotTranslate }}</span>
+        <span class="glory-cash-info__price"> {{ totalAmountOwed | dotCurrency:true }}</span></span>
+      <span class="glory-cash-info__message">
+        <span class="glory-cash-info__text">{{ "2021022408" | dotTranslate }}</span>
+        <span class="glory-cash-info__price"> {{ amountPaidCurrent | dotCurrency:true }}</span></span>
+      <span class="glory-cash-info__message">
+        <span class="glory-cash-info__text">{{ "2021022409" | dotTranslate }}</span>
+        <span class="glory-cash-info__price">{{ amountDue | dotCurrency:true }}</span></span>
+    </div>
+  </div>
+
+  <section class="flex flex--column center" [ngClass]="!isAdaEnabled() ? 'col-2-16 row-13-22' : 'col-2-16 row-14-22'">
+    <video class="glory-video" autoplay muted loop src="./assets/videos/short_kiosk_video.webm"></video>
+  </section>
+
+  <section class="flex flex--column center" [ngClass]="!isAdaEnabled() ? 'col-2-16 row-22-28' : 'col-2-16 row-22-27'">
+    <p class="fs--30 m--10 font--secondary text--center" [innerHTML]="'2021022406' | dotTranslate"></p>
+    <p *ngIf="hasError" class="fs--30 m--10 font--secondary color--error-red text--center" [innerHTML]="'2021022411' | dotTranslate"></p>
+  </section>
+
+  <section class="col-2-16 row-28-31 flex center" [ngClass]="{ 'justify--between': !hasError }">
+    <button *ngIf="!hasError" class="ui-button primary color--tertiary medium" [attr.aria-label]="'Finish With Other Payment Method'" (click)="finishWithOtherPayment()">
+      <span class="ui-button__wrapper">
+        <span class="fs--24">{{ "2021022412" | dotTranslate }}</span>
+      </span>
+    </button>
+    <button *ngIf="!hasError" class="ui-button secondary medium" [attr.aria-label]="'Cancel'" (click)="cancel()">
+      <span class="ui-button__wrapper">
+        <span>{{ "23" | dotTranslate }}</span>
+      </span>
+    </button>
+    <button *ngIf="hasError" class="ui-button secondary medium" [attr.aria-label]="'Print Receipt'" (click)="printReceipt()">
+      <span class="ui-button__wrapper">
+        <span>{{ "2021022413" | dotTranslate }}</span>
+      </span>
+    </button>
+  </section>
+</div>

@@ -1,0 +1,69 @@
+<div *ngIf="page" class="main-grid">
+  <acr-nav-slider class="col-1-17 pb--20" (navButtonClick)="onNavButtonClick()"
+    [ngClass]="!isAdaEnabled() ? 'row-1-5' : 'row-1-7'">
+  </acr-nav-slider>
+
+  <section class="col-1-17" [ngClass]="!isAdaEnabled() ? 'row-5-6' : 'row-7-9'">
+    <header class="top-menu full">
+      <button *ngIf="displayBackButton" class="ui-button primary bg--tertiary tiny iconLeft" (click)="back()"
+        attr.aria-label="Button: Back">
+        <span class="ui-button__wrapper">
+          <svg class="lib-icon size--20">
+            <use href="#lib-icon--chevron-left"></use>
+          </svg>
+          <span>{{ "9" | dotTranslate }}</span>
+        </span>
+      </button>
+      <h4 class="top-menu__title" [ngClass]="{
+          'fs--42': page.TitleDictionary
+            ? (page.TitleDictionary | dotTitleTranslate).length >= 24
+            : page.Title.length >= 24
+        }">
+        {{
+        page.TitleDictionary
+        ? (page.TitleDictionary | dotTitleTranslate)
+        : page.Title
+        }}
+      </h4>
+    </header>
+  </section>
+
+  <section class="buttons-list hideScrollbar col-1-17" [ngClass]="
+      getTouchlessClass({
+        classFullHD: 'row-6-26',
+        classAda: 'row-9-24',
+        classFullHDTouchless: 'row-6-24',
+        classAdaTouchless: 'row-9-22'
+      })
+    " #scrollRef>
+    <div class="grid products--grid cols--3">
+      <acr-button *ngFor="let button of page.Buttons | catalogButtonAvailability" [button]="button"
+        [extraClasses]="isDropdownOpen(button.Link) ? 'selected' : ''"
+        [displayBackground]="page.PageTemplate === 'ButtonsWithBackground'"
+        [unavailableButton]="unavailableButton(button)" (click)="select(button)">
+      </acr-button>
+
+      <acr-dropdown *ngIf="dropdownPage.display && dropdownPage.page"
+        [buttons]="dropdownPage.page.Buttons | catalogButtonAvailability" class="dropdown-modifiers"
+        [ngClass]="'row-' + dropdownPage.row" (dropdownButtonClick)="select($event)">
+      </acr-dropdown>
+    </div>
+  </section>
+
+  <acr-vertical-scroll-buttons *ngIf="enabledTouchlessMode()" class="scroll-nav col-1-17"
+    [ngClass]="!isAdaEnabled() ? 'row-24-26' : 'row-22-24'" [scrollRef]="scrollRef" [incrementHeight]="scrollIncrement"
+    (scrollArrowClick)="onVerticalScrollButtonClick()">
+  </acr-vertical-scroll-buttons>
+
+  <section class="align--center col-1-17" [ngClass]="!isAdaEnabled() ? 'row-26-28' : 'row-24-26'">
+    <acr-voucher-info class="footer__info"></acr-voucher-info>
+  </section>
+
+  <footer class="footer col-1-17" [ngClass]="!isAdaEnabled() ? 'row-28-31' : 'row-26-31'">
+    <acr-footer-actions class="footer__body" [leftBtnMethod]="'startOver'" [leftBtnAriaLabel]="'Cancel Order Button'"
+      [leftBtnTranslate]="'57'" [rightBtnMethod]="'goToCheckout'" [rightBtnAriaLabel]="'Confirm Order Button'"
+      [rightBtnTranslate]="'8'">
+    </acr-footer-actions>
+    <acr-order-button class="footer__cart"></acr-order-button>
+  </footer>
+</div>

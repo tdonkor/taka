@@ -1,0 +1,44 @@
+{
+  "Monday": {
+    "Start": "00:00",
+    "End": "23:00",
+    "IsClosed": false,
+    "IsRoundTrip": false
+  },
+  "Tuesday": {
+    "Start": "06:20",
+    "End": "20:55",
+    "IsClosed": false,
+    "IsRoundTrip": false
+  },
+  "Wednesday": {
+    "Start": "00:00",
+    "End": "19:20",
+    "IsClosed": false,
+    "IsRoundTrip": false
+  },
+  "Thursday": {
+    "Start": "02:50",
+    "End": "17:50",
+    "IsClosed": false,
+    "IsRoundTrip": false
+  },
+  "Friday": {
+    "Start": "03:25",
+    "End": "24:00",
+    "IsClosed": false,
+    "IsRoundTrip": false
+  },
+  "Saturday": {
+    "Start": "00:00",
+    "End": "24:00",
+    "IsClosed": false,
+    "IsRoundTrip": false
+  },
+  "Sunday": {
+    "Start": "11:30",
+    "End": "24:00",
+    "IsClosed": false,
+    "IsRoundTrip": false
+  }
+}

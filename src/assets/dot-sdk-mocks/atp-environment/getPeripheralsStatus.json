@@ -1,0 +1,29 @@
+{
+  "IsPrinterAvailable": true,
+  "IsScannerAvailable": false,
+  "IsScaleAvailable": false,
+  "IsCameraAvailable": false,
+  "IsPaymentAvailable": true,
+  "IsNFCAvailable": false,
+  "IsMagAvailable": false,
+  "IsWirelessAvailable": false,
+  "IsInternetAvailable": true,
+  "IsIOBoardAvailable": false,
+  "IsFiscalPrinterAvailable": false,
+  "ArePaymentsAvailable": [
+    {
+      "IsPeripheralAvailable": true,
+      "Name": "SIMULATOR_INTERACTIVE",
+      "Type": "card"
+    }
+  ],
+  "ArePrintersAvailable": [
+    {
+      "IsPeripheralAvailable": true,
+      "Name": "BTP-R180II",
+      "Type": "printer"
+    }
+  ],
+  "AreScannersAvailable": [],
+  "AreIOBoardsAvailable": []
+}

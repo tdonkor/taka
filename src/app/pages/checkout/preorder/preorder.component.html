@@ -1,0 +1,44 @@
+
+<div *ngIf="isTableServiceActive" class="main-grid preorder">
+  <section class="flex flex--column center" [ngClass]="!isAdaEnabled() ? 'col-4-14 row-3-13' : 'col-6-12 row-3-13'">
+    <div class="square full flex flex--column center justify--between">
+			<img src="./assets/images/payment-selection--counter--accent.png" alt="">
+    </div>
+  </section>
+  <section class="col-4-14 row-14-20 flex flex--column center justify--between">
+		<svg class="lib-icon size--140 color--accent">
+			<use href="#lib-icon--long-arrow-up"></use>
+		</svg>
+		<h3 class="text--center">{{ '20210208001' | dotTranslate}}</h3>
+	</section>
+	<section class="col-1-17 row-20-30 flex flex--column center">
+		<div class="flex center justify--between">
+			<picture class="circle" [ngClass]="!isAdaEnabled() ? 'medium' : 'small'">
+				<img src="./assets/images/payment-selection--flag.png" alt="">
+			</picture>
+			<svg class="lib-icon ts--plus-icon m--50">
+        <use href="#lib-icon--plus"></use>
+      </svg>
+			<picture class="circle" [ngClass]="!isAdaEnabled() ? 'medium' : 'small'">
+				<img src="./assets/images/table-service-receipt.png" alt="">
+			</picture>
+		</div>
+	</section>
+</div>
+
+<div *ngIf="!isTableServiceActive" class="main-grid preorder">
+	<section class="col-1-17 row-1-10 flex flex--column center">
+	  <img class="logo" src="./assets/branding/taka.PNG" alt="">
+	</section>
+	<section class="flex flex--column center" [ngClass]="!isAdaEnabled() ? 'col-4-14 row-10-20' : 'col-6-12 row-10-20'">
+	  <div class="square full flex flex--column center justify--between">
+			  <img src="./assets/images/payment-selection--counter--accent.png" alt="">
+	  </div>
+	</section>
+	<section class="col-4-14 row-22-28 flex flex--column center justify--between">
+		  <h3 class="text--center">{{ '20210208002' | dotTranslate}}</h3>
+		  <svg class="lib-icon size--140 color--accent">
+			  <use href="#lib-icon--long-arrow-up"></use>
+		  </svg>
+	  </section>
+  </div>

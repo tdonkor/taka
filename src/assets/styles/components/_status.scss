@@ -1,0 +1,49 @@
+.peripherals-status {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  max-width: 100%;
+  min-height: 120rem;
+  margin: 0 auto;
+  padding: 30rem;
+  pointer-events: none;
+
+  &.hasBackground {
+    background: rgba(0, 0, 0, 0.863);
+  }
+
+  &__messages {
+    max-width: 83%;
+    margin: 0 auto;
+
+    p {
+      font-size: 18rem;
+      margin: 2rem 0;
+      color: var(--white);
+      font-weight: bold;
+      font-family: var(--font-tertiary);
+    }
+  }
+
+  .openAdmin {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100rem;
+    height: 100rem;
+    z-index: 999;
+  }
+
+  // Banners Color codes for Glory Status
+  .color-code {
+    width: 80rem;
+    height: 80rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 20rem;
+    transform: translateY(-50%);
+  }
+}

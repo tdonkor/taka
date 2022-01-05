@@ -1,0 +1,13 @@
+<button  class="ui-button primary bg--tertiary tiny" [style.visibility]="displayPromoButton?'visible':'hidden'"  [attr.aria-label]="'Vouchers Button'" (click)=useVoucher()>
+  <span>{{ '4' | dotTranslate}}</span>
+</button>
+<div class="flex">
+  <button *ngIf="displayCaloriesButton" class="ui-button simple color--light-gray" (click)="toCalories()" [attr.aria-label]="'Calories Button'">
+    <span>{{ '2' | dotTranslate }}</span>
+  </button>
+  <button *ngIf="displayAllergensButton" class="ui-button simple color--light-gray pr--0"
+          [attr.aria-label]="'Allergens Button'"
+          (click)="allergensClick()">
+    <span>{{ '3' | dotTranslate }}</span>
+  </button>
+</div>

@@ -1,0 +1,79 @@
+.keyboard {
+  width: 100%;
+
+  &__output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    min-height: 122rem;
+    margin: 80rem auto;
+    border-radius: 80rem;
+    background: var(--primary);
+
+    &-text {
+      color: var(--accent);
+      padding: 10rem 20rem;
+      max-width: 70%;
+      overflow-x: scroll;
+    }
+  }
+
+  &__keys {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__key {
+    background: var(--white);
+    box-shadow: 0 4rem 7rem 0 rgba(0, 0, 0, 0.18);
+    border-radius: 40rem;
+    width: 74rem;
+    height: 64rem;
+    font-size: 46rem;
+    margin: 7rem;
+    color: var(--tertiary);
+
+    &:active {
+      animation: keyStroke 100ms ease-in-out;
+    }
+
+    &.empty {
+      visibility: hidden;
+    }
+
+    &.clear {
+      text-transform: uppercase;
+      font-size: 30rem;
+      width: 100rem;
+    }
+  }
+
+  // Numeric Keyboard Specific Styles
+  &.numeric {
+    .keyboard__output {
+      margin: 60rem auto 40rem auto;
+    }
+
+    .keyboard__keys {
+      flex-direction: column;
+
+      .row {
+        &:last-of-type {
+          justify-content: flex-end;
+
+          .keyboard__key {
+            color: var(--stepper-gray);
+
+            .lib-icon {
+              use {
+                --icon-primary-color: var(--stepper-gray);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

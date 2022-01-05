@@ -1,0 +1,103 @@
+{
+  "Display": {
+    "Height": 1920,
+    "Width": 1080,
+    "Top": 0,
+    "Left": 0,
+    "Orientation": "portrait",
+    "HasTouch": true,
+    "Ratio": "9:16"
+  },
+  "Printer": {
+    "PaperWidthInPixels": 500,
+    "PaperHeightInPixels": 0,
+    "PaperWidth": 80,
+    "CharsPerLine": 42,
+    "SmallerCharsPerLine": 56,
+    "DoubleCharsPerLine": 21,
+    "Magnification2CharsPerLine": 21,
+    "Magnification3CharsPerLine": 14,
+    "Magnification4CharsPerLine": 10,
+    "DoubleHeightCharsPerLine": 42,
+    "DoubleWidthCharsPerLine": 21
+  },
+  "Payment": {
+    "AcceptsCash": false,
+    "CanRefund": false,
+    "ReceivePayProgressCalls": true,
+    "RequiresOrderMarginCalls": false,
+    "IsPaymentElectronic": false,
+    "PaymentApplications": []
+  },
+  "IOBoard": {
+    "CanReadPrinterDoorState": false,
+    "CanReadMaintenanceDoorState": false,
+    "CanReadAdditionalDoorState": false,
+    "CanReadTemperature": false,
+    "CanDetectCustomer": false,
+    "CanSetSemaphore": false,
+    "CanOpenPrinterDoor": false,
+    "CanOpenMaintenanceDoor": false,
+    "CanOpenAdditionalDoor": false,
+    "CanSetCustomerJourneyPayment": false,
+    "CanSetCustomerJourneyPrinter": false,
+    "CanSetCustomerJourneyScanner": false,
+    "CanOpenBarrier": false,
+    "CanSetBlinkStickColor": false
+  },
+  "NfcReader": {
+    "CanRead": false,
+    "CanReadFileInfo": false
+  },
+  "FiscalPrinter": {
+    "PaperWidthInPixels": 0,
+    "PaperHeightInPixels": 0,
+    "PaperWidth": 0,
+    "CharsPerLine": 0,
+    "SmallerCharsPerLine": 0,
+    "DoubleCharsPerLine": 0,
+    "Magnification2CharsPerLine": 0,
+    "Magnification3CharsPerLine": 0,
+    "Magnification4CharsPerLine": 0,
+    "DoubleHeightCharsPerLine": 0,
+    "DoubleWidthCharsPerLine": 0
+  },
+  "MagReader": {
+    "CanReadData": false
+  },
+  "Payments": [
+    {
+      "Name": "SIMULATOR_INTERACTIVE",
+      "Type": "card",
+      "AcceptsCash": false,
+      "CanRefund": false,
+      "ReceivePayProgressCalls": true,
+      "RequiresOrderMarginCalls": false,
+      "IsPaymentElectronic": false,
+      "PaymentApplications": []
+    }
+  ],
+  "Printers": [
+    {
+      "Name": "BTP-R180II",
+      "Type": "printer",
+      "PaperWidthInPixels": 500,
+      "PaperHeightInPixels": 0,
+      "PaperWidth": 80,
+      "CharsPerLine": 42,
+      "SmallerCharsPerLine": 56,
+      "DoubleCharsPerLine": 21,
+      "Magnification2CharsPerLine": 21,
+      "Magnification3CharsPerLine": 14,
+      "Magnification4CharsPerLine": 10,
+      "DoubleHeightCharsPerLine": 42,
+      "DoubleWidthCharsPerLine": 21
+    }
+  ],
+  "IOBoards": [],
+  "CustomerLanguage": "en-GB",
+  "CustomerDisabilityOn": false,
+  "SingleAppMode": false,
+  "PassiveAppMode": false,
+  "IgnoreInternetAccess": false
+}

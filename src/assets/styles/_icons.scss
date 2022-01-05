@@ -1,0 +1,45 @@
+.lib-icon {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 64rem;
+  height: 64rem;
+  flex-shrink: 0;
+
+  &.color--accent {
+    use {
+      --icon-primary-color: var(--pantone-blue);  // Added by TD
+      --icon-secondary-color: var(--primary);
+    }
+  }
+
+  &.color--secondary {
+    use {
+      --icon-primary-color: var(--secondary);
+    }
+  }
+
+  &.color--tertiary {
+    use {
+      --icon-primary-color: var(--tertiary);
+    }
+  }
+
+  &.color--white {
+    use {
+      --icon-primary-color: var(--white);
+    }
+  }
+
+  &.color--light-gray {
+    use {
+      --icon-primary-color: var(--light-gray);
+    }
+  }
+
+  &.color--stepper-gray {
+    use {
+      --icon-primary-color: var(--stepper-gray);
+    }
+  }
+}

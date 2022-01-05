@@ -1,0 +1,93 @@
+{
+	"Printer": {
+		"StatusCode": 0,
+		"Status": true,
+		"Description": "NOT Ready."
+	},
+	"Scanner": {
+		"StatusCode": 0,
+		"Status": false,
+		"Description": "peripheral is not configured"
+	},
+	"Scale": {
+		"StatusCode": 0,
+		"Status": false,
+		"Description": "peripheral is not configured"
+	},
+	"Camera": {
+		"StatusCode": -1,
+		"Status": false,
+		"Description": "peripheral is not configured"
+	},
+	"Payment": {
+		"StatusCode": 0,
+		"Status": true,
+		"Description": ""
+	},
+	"NFC": {
+		"StatusCode": -1,
+		"Status": false,
+		"Description": "peripheral is not configured"
+	},
+	"MagReader": {
+		"StatusCode": -1,
+		"Status": false,
+		"Description": "peripheral is not configured"
+	},
+	"Wireless": {
+		"StatusCode": -1,
+		"Status": false,
+		"Description": "peripheral is not configured"
+	},
+	"InternetAccess": {
+		"StatusCode": 0,
+		"Status": true,
+		"Description": ""
+	},
+	"IOBoard": {
+		"StatusCode": -1,
+		"Status": false,
+		"Description": "peripheral is not configured"
+	},
+	"FiscalPrinter": {
+		"StatusCode": -1,
+		"Status": false,
+		"Description": "peripheral is not configured"
+	},
+	"Payments": [
+		{
+			"Name": "SIMULATOR",
+			"Type": "card",
+			"StatusCode": 0,
+			"Status": true,
+			"Description": "card peripheric in error"
+		},
+		{
+			"Type": "cash",
+			"Name": "PAY_SIMULATOR_CASH_INTERACTIVE",
+			"Version": "1.0.3.13",
+			"StatusCode": 0,
+			"Status": true,
+			"Description": "cash peripheric in error"
+		}
+	],
+	"Printers": [
+		{
+			"Name": "BTP-R180II",
+			"Type": "printer",
+			"StatusCode": 0,
+			"Status": true,
+			"Description": "printer in error"
+		}
+	],
+	"Scanners": [
+		{
+			"Name": "BTP-R180II",
+			"Type": "scanner",
+			"StatusCode": 0,
+			"Status": true,
+			"Description": "scanner in error"
+		}
+	],
+	"IOBoards": []
+}

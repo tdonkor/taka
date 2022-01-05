@@ -1,0 +1,35 @@
+{
+	"NestDetails": {
+		"Name": "DOT XIX Dev 1",
+		"Description": "DOT XIX Dev 1"
+	},
+	"StoreDetails": {
+		"Code": "dotxix0900",
+		"Name": "DOT XIX",
+		"Description": "testing DOT XIX Apps"
+	},
+	"CoreVer": "7.0.2",
+	"Api": 7,
+	"LastSyncWithServer": "2019-11-12T14:20:54.187Z",
+	"NestIdentifier": "com.acrelec.0b09202e0f",
+	"NestSignature": "bba1b8b4439440a39eef33ba60813b71",
+	"Battery": {
+		"IsAttached": false
+	},
+	"Wireless": {},
+	"InternetAccess": {
+		"IsAvailable": true
+	},
+	"Volume": 0,
+	"WindowsImageVersion": {
+		"HardwareName": "Skylake i5",
+		"Model": "EPC-T22855A",
+		"InitialCoreVer": "4.1.2",
+		"WindowsVer": "Windows 10 iOT LTSB 2016 x86 ",
+		"WindowsImageVer": "ACR_SKYI5_WIN10-IOT-2016_X64_UEFI_V1.21.iso",
+		"WindowsImageDate_iso": "2018-12-28T09:47:09.2690036+01:00"
+	},
+	"DeviceType": "kiosk",
+	"IsInQuietMode": false,
+	"DeviceState": "sandbox"
+}

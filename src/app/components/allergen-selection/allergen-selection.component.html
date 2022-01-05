@@ -1,0 +1,68 @@
+<div [@popupOut] *ngIf = "!exitAnimation" class="popup popup--allergens">
+  <div [@popupIn] class="content">
+    <div class="main-grid bg--primary">
+      <div class="col-1-17 row-1-28 flex flex--column align--center">
+        <h3 class="color--white pt--80 pb--40">{{ '3' | dotTranslate}}</h3>
+        <button class="ui-button primary" [attr.aria-label]="'Button Allergens Info'" (click)="tabbedContentClick()">
+          <span class="ui-button__wrapper">
+            <span *ngIf="!displayTabbedContent" class="fs--26">{{ '2020012203' | dotTranslate }}</span>
+            <span *ngIf="displayTabbedContent"  class="fs--26">{{ '16' | dotTranslate }}</span>
+          </span>
+        </button>
+        <section *ngIf="displayTabbedContent" class="content-box">
+          <p class="fs--32 text--left">
+            {{ '2020012202' | dotTranslate }}
+          </p>
+        </section>
+        <section *ngIf="!displayTabbedContent" class="allergens-list hideScrollbar">
+          <button *ngFor="let allergen of allergens" (click)="allergensClick(allergen)" class="allergen"
+            [ngClass]="{ selected: isAllergenSelected(allergen) }"
+            attr.aria-label="Allergen Button: {{ allergen | translateAllergenLabel }}"
+          >
+            <svg *ngIf="isAllergenIconAvailable(allergen)" class="lib-icon allergen__icon" [ngClass]="{
+                'color--secondary': !isAllergenSelected(allergen),
+                'color--primary': isAllergenSelected(allergen)
+              }">
+              <use attr.href="#lib-icon--allergens-{{ allergen.Name }}"></use>
+            </svg>
+            <svg *ngIf="!isAllergenIconAvailable(allergen)" class="lib-icon allergen__icon" [ngClass]="{
+                'color--secondary': !isAllergenSelected(allergen),
+                'color--primary': isAllergenSelected(allergen)
+              }">
+              <use href="#lib-icon--allergens-WHE"></use>
+            </svg>
+            <h5 class="allergen__title">
+              {{ allergen | translateAllergenLabel }}
+            </h5>
+            <svg class="lib-icon lib-icon--pill-plus size--38" [ngClass]="{
+                'color--accent': !isAllergenSelected(allergen),
+                'color--primary': isAllergenSelected(allergen)
+              }">
+              <use [attr.href]="
+                  isAllergenSelected(allergen)
+                    ? '#lib-icon--pill-checkmark'
+                    : '#lib-icon--pill-plus'
+                "></use>
+            </svg>
+          </button>
+          <div class="spacer--40"></div>
+        </section>
+      </div>
+      <div class="actions m--0 col-1-17 row-28-31">
+        <button class="ui-button primary small" (click)="resetFilterClick()" attr.aria-label="Button Reset Filter">
+          <span class="ui-button__wrapper">
+            <span>{{ '25' | dotTranslate }}</span>
+          </span>
+        </button>
+        <button class="ui-button secondary iconRight small" (click)="closeClick()" attr.aria-label="Button Close">
+          <span class="ui-button__wrapper">
+            <svg class="lib-icon size--20">
+              <use href="#lib-icon--chevron-right"></use>
+            </svg>
+            <span>{{ '24' | dotTranslate }}</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

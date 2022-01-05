@@ -1,0 +1,16 @@
+<button class="cart-button" (click)="basketToggle()" [attr.aria-label]="'Basket Toggle Button'">
+  <div class="cart-button__wrapper">
+    <div class="flex justify--center align--end">
+      <svg class="lib-icon color--accent"><use href="#lib-icon--meal"></use></svg>
+      <div class="cart-button__items">
+        <h5>{{basketTitle}}</h5>
+      </div>
+    </div>
+    <div class="cart-button__line"></div>
+    <h6 class="cart-button__text fs--26">{{ '7' | dotTranslate}}</h6>
+  </div>
+  <svg class="lib-icon cart-icon--chevron size--24 color--tertiary"><use href="#lib-icon--chevron-up"></use></svg>
+  <div class="cart-button__nr" *ngIf="basketButtonLength">
+    <h5>{{basketButtonLength}}</h5>
+  </div>
+</button>

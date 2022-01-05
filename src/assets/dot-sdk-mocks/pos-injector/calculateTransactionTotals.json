@@ -1,0 +1,42 @@
+{
+  "SubTotal": 5.00,
+  "Tax": 0.20,
+  "SubtotalCents": 500,
+  "TaxCents": 0,
+  "OrderPOSNumber": null,
+  "FunctionNumber": 33,
+  "Receipt": "<@RightOn>Subtotal: $1.89<@RightOff>\r\n<@RightOn>Service Tax: $0.19<@RightOff>\r\n<@RightOn>Auto Service: $0.00<@RightOff>\r\n<@RightOn>Service Charge: $0.00<@RightOff>",
+  "NotOpen": false,
+  "OrderGuid": null,
+  "LogonInsertNumber": null,
+  "Elog": "<Transaction Ver=\"1900\" SIM=\"00000000\" Kiosk=\"1234\" Day=\"191126\" ID=\"\" FunctionNumber=\"33\" ExtID=\"\" RefInt=\"251252\" Lang=\"EN\" PreOrder=\"false\" StoreID=\"abcd\" StoreName=\"Gica SRL\">\r\n  <Stat />\r\n  <Timing T_InOut=\"105214\" T_EndOrder=\"105235\" T_POS=\"105235\" T_FirstItem=\"105218\" />\r\n  <Service Location=\"0\" Table=\"-1\" />\r\n  <CVARS />\r\n  <ReceiptText Value=\"Bon Appetit!\" />\r\n  <Order>\r\n    <DOTElement Type=\"Single\" ID=\"4747220011\" RName=\"Oatmeal Raisin Cookie|310 Cal.\" Qty=\"1\" Promo=\"0\" UUID=\"722e04af-9826-42e6-ac3b-2ef500a909c5\" Price=\"189\" Vis=\"0\" PLevel=\"-1\" GroupType=\"0\" DefaultQuantity=\"1\" />\r\n  </Order>\r\n</Transaction>",
+  "ForceImport": false,
+  "IsNewOrder": false,
+  "DiscountItems": [ 
+	{
+	  "DiscountName": "",
+	  "DiscountId": "10437",
+	  "Amount": "29",
+	  "Reference": "103006045"
+    },
+    {
+  	  "DiscountName": "",
+	  "DiscountId": "10437",
+	  "Amount": "29",
+	  "Reference": "1002"
+    }
+  ],
+  "ErrorType": 0,
+  "ErrorCode": 0,
+  "ExecuteStarted": true,
+  "InternalReturnCode": 0,
+  "ReturnCode": 0,
+  "Class": null,
+  "FuncErrorOccurred": null,
+  "ReturnMessageDetail": null,
+  "POSMessage": "",
+  "ReturnMessage": "Calculate transaction totals fail",
+  "Success": true,
+  "BusinessDay": "2019-11-26",
+  "Injector": "c:\\Acrelec\\AcrBridgeService\\DOTXV.MarcoPoloPOSInjector.exe v 1.0.31.0"
+}

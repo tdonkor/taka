@@ -1,0 +1,26 @@
+<div class="collapsible full">
+  <button class="collapsible__toggle" (click)="toggleCollapsible()" [attr.aria-label]="'Button Toggle Collapsible'">
+    <h4 class="collapsible__title" *ngIf='isExtraButton'>{{ '2021012501' | dotTranslate }}
+      <svg class="lib-icon size--20 color--accent"><use attr.href="#lib-icon--chevron-{{ arrowImage }}" ></use></svg>
+    </h4>
+    <h4 class="collapsible__title" *ngIf='!isExtraButton'>{{ '64' | dotTranslate }}
+      <svg class="lib-icon size--20 color--accent"><use attr.href="#lib-icon--chevron-{{ arrowImage }}" ></use></svg>
+    </h4>
+  </button>
+
+  <div class="collapsible__content" [@collapse]="collapsed" [attr.aria-label]="collapsed ? 'Collapsible Content: Closed' : 'Collapsible Content: Open'">
+    <div class="products--grid auto--columns centered">
+      <acr-button-modifier *ngFor='let button of buttons' 
+      [modifierButton]='button'
+      (selectedModifiers)='selectModifiers($event)'
+      [maxQuantityGroup]='complementModifier.PageInfo.MaxQuantity'
+      [minQuantityGroup]='complementModifier.PageInfo.MinQuantity' 
+      [getQuantityButtons]='getQuantityButtons'
+      [chargeThresholdGroup]='chargeThresholdGroup'
+      [isComplementButton]="true"
+      (quantityChanged)='quantityChanged(button, $event)'
+    >
+    </acr-button-modifier>
+  </div>
+</div>
+</div>

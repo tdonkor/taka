@@ -1,0 +1,15 @@
+
+  <div *ngFor="let _ of [].constructor(stepsLength()); let i = index" class="step" [ngClass]="cssClasses(i)">
+    <span *ngIf="isCombo; else notCombo"  class="step__name"> {{ getStep(i) | translateComboStepName }}</span>
+    <ng-template #notCombo>
+      <span class="step__name">
+        {{ '2021050702' | dotTranslate }} {{ i + 1 }}
+      </span>
+    </ng-template>
+    <span class="step__circle">
+      <svg *ngIf="currentHighlight > i" class="lib-icon size--32 color--accent"><use href="#lib-icon--pill-checkmark"></use></svg>
+      <img *ngIf="isCombo && currentHighlight === i" [src]="getStep(i) | translateComboImage" alt="">
+    </span>
+  </div>
+  
+ 

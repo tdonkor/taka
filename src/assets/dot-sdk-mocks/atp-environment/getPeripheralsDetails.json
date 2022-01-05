@@ -1,0 +1,26 @@
+{
+	"Payments": [
+		{
+			"Type": "card",
+			"Name": "SIMULATOR",
+			"Version": "1.0.3.13"
+		},
+		{
+			"Type": "cash",
+			"Name": "PAY_SIMULATOR_CASH_INTERACTIVE",
+			"Version": "1.0.3.13"
+		}
+	],
+	"Printers": [
+		{
+			"Name": "BTP-R180II",
+			"Type": "printer"
+		}
+	],
+	"Scanners": [
+		{
+			"Name": "BTP-R180II",
+			"Type": "scanner"
+		}
+	]
+}

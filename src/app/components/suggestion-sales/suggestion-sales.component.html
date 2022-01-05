@@ -1,0 +1,56 @@
+<div [@popupOut] *ngIf = "!exitAnimation" class="popup popup--wizardType">
+  <div [@popupIn] class="content height70">
+    <div class="main-grid">
+      <div class="col-1-17 row-3-5 flex flex--column center justify--end">
+        <h3 class="title">{{ page.TitleDictionary ? (page.TitleDictionary | dotTitleTranslate) : page.Title}}</h3>
+      </div>
+      <div class="col-1-17 row-5-7 flex flex--column center justify--end">
+        <h5 class="title" *ngIf="displayMaxQuantityMessage">{{'2021040601' | dotTranslate}}</h5>
+      </div>  
+      <div class="flex flex--column" [ngClass]="enabledTouchlessMode() ? 'col-1-17 row-7-26' : 'col-1-17 row-7-28'">
+        <div class="scrollY full hideScrollbar" #scrollRef>
+          <div class="modifiers-list withoutHeader">
+            <div class="products--grid auto--columns centered">
+              <acr-button-modifier *ngFor='let button of page.Buttons | catalogButtonAvailability' 
+                [modifierButton]='button'
+                [displayUpsizePrice]='true'
+                [maxQuantityGroup]='page.MaxQty'
+                [getQuantityButtons]='totalQuantity'
+                [unavailableButton]='isUnavailableButton(button)'
+                [isDisabled]="isButtonDisabled(button)"
+                [maxQuantityExists]="!!button.maxQuantity"
+                [showCounterEdit]="true"
+                (quantityChanged)='quantityChanged(button, $event)'
+                (selectedModifiers)='onButtonClick($event)'>
+              </acr-button-modifier>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+      <acr-vertical-scroll-buttons
+        *ngIf="enabledTouchlessMode()"
+        class="scroll-nav col-1-17 row-26-28"
+        [scrollRef]="scrollRef" 
+        [incrementHeight]="scrollIncrement"
+      >
+      </acr-vertical-scroll-buttons>
+
+      <div class="actions col-1-17 row-28-31">
+        <button class="ui-button primary small" (click)='cancelClick()' [attr.aria-label]="'No thanks Button'">
+          <span class="ui-button__wrapper">
+            <span>{{ '72' | dotTranslate}}</span>
+          </span>
+        </button>
+        <button class="ui-button secondary iconRight small" (click)='addToBasketClick()' [attr.aria-label]="'Add to bag Button'" [disabled]="disableAddToBag">
+          <span class="ui-button__wrapper">
+            <svg class="lib-icon size--20">
+              <use href="#lib-icon--chevron-right"></use>
+            </svg>
+            <span>{{ '27' | dotTranslate}}</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,221 @@
+html.ada {
+  font-size: 0.04vh; // 1 rem for Full HD resolution
+
+  .logo {
+    max-width: 150rem;
+  }
+
+  .main-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50vh;
+  }
+
+  // !!! We don't want the main-grid to be positioned absolute inside popups
+  .popup {
+    .main-grid {
+      position: static;
+      height: 100%;
+    }
+
+    .content {
+      position: absolute;
+      bottom: 80rem;
+      max-height: 50vh;
+    }
+
+    &--combo {
+      .content {
+        height: 50vh;
+      }
+
+      .header {
+        background-position: bottom;
+      }
+
+      .combo-img {
+        max-width: 200rem;
+        top: 40rem;
+      }
+    }
+
+    &--confirm-dialog {
+      .content {
+        max-width: 70%;
+      }
+    }
+  }
+
+  .welcome {
+    .title {
+      font-size: 100rem;
+    }
+
+    .subtitle {
+      font-size: 54rem;
+    }
+  }
+
+  .service-type {
+    &__text {
+      padding: 0;
+
+      h3 {
+        font-size: 38rem;
+      }
+    }
+
+    img {
+      max-width: 70%;
+    }
+  }
+
+  .payment-type {
+    img {
+      max-width: 180rem;
+    }
+  }
+
+  .footer {
+    &__cart {
+      height: 224rem;
+    }
+
+    &__left {
+      justify-content: center;
+    }
+  }
+
+  .buttons-list {
+    .products--grid {
+      padding: 10rem 40rem;
+      grid-template-rows: minmax(300rem, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .product {
+      img {
+        max-width: 120rem;
+      }
+    }
+  }
+
+  .product {
+    transition: none;
+
+    &__title {
+      font-size: 24rem;
+    }
+  }
+
+  .modifiers-list {
+    grid-template-rows: 70rem auto;
+
+    &.withoutHeader {
+      grid-template-rows: unset;
+    }
+  }
+
+  .nav-slider {
+    &__wrapper {
+      height: 100%;
+    }
+
+    .nav-slider-item {
+      &__title {
+        font-size: 24rem;
+        transition: none;
+      }
+    }
+  }
+
+  .dropdown-modifiers {
+    height: 100%;
+
+    .dropdown-modifier {
+      img {
+        max-width: 100rem;
+      }
+    }
+  }
+
+  .basket {
+    top: unset;
+    height: 38vh;
+    bottom: 190rem;
+
+    &__contents {
+      grid-template-rows: 470rem 100rem 1fr;
+    }
+  }
+
+  .basketOpened {
+    .footer__info {
+      top: 0;
+    }
+
+    .footer__cart {
+      top: 50rem;
+    }
+  }
+
+  .stepper {
+    .step {
+      &::after {
+        bottom: 45rem;
+      }
+    }
+  }
+
+  .circle {
+    width: 400rem;
+    height: 400rem;
+
+    &.small {
+      width: 300rem;
+      height: 300rem;
+    }
+  }
+
+  .table-service {
+    .table-service__flag {
+      max-width: 30%;
+    }
+  }
+
+  .quantity-info__actions {
+    padding: 8rem 0;
+  }
+
+  .combo-img {
+    &.index--2 {
+      right: 490rem !important;
+    }
+
+    &.index--3 {
+      left: 490rem !important;
+    }
+  }
+}
+
+// Ada Touchless DM
+html.ada--touchless {
+  body {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1000;
+      display: flex;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      border: 10rem dashed var(--accent);
+      pointer-events: none;
+    }
+  }
+}

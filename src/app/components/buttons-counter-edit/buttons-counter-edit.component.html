@@ -1,0 +1,28 @@
+<div class="quantity-info">
+  <div class="quantity-info__actions">
+    <button class="ui-button icon-button" (click)="changeQuantity(-1)" [disabled]='isButtonDisabled'
+      [attr.aria-label]="'Quantity Decrease Button'">
+      <svg class="lib-icon color--light-gray">
+        <use href="#lib-icon--outline-minus"></use>
+      </svg>
+    </button>
+
+    <h3 class="quantity-info__amount" *ngIf="!hasDefaultQuantity" [ngClass]="{'color--red' : quantity >= maxQuantity && !basketExceededMaxQty}">
+      <!-- <span class="fs--34 color--accent">+</span> -->
+      {{ (prefixQuantity >= 0 && hasPrefixes) ? prefixQuantity : quantity }}
+    </h3>
+
+    <button class="ui-button icon-button" (click)="changeQuantity(1)" [disabled]='disabledIncrementBtn'
+      [attr.aria-label]="'Quantity Increase Button'">
+      <svg class="lib-icon color--light-gray">
+        <use href="#lib-icon--outline-plus"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="quantity-info__total text--center" *ngIf="price && displayPrice">
+    <h4 class="font--secondary">
+      {{ price | dotCurrency }}
+    </h4>
+  </div>
+</div>

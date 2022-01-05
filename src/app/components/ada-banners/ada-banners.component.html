@@ -1,0 +1,6 @@
+<div class="ada-banner">
+	<ng-container *ngIf="bannersService.showBanner">
+		<img *ngIf="bannersService.isCurrentBannerImage"  [src]="bannersService.currentBannerSrc"/>
+		<video *ngIf="bannersService.isCurrentBannerVideo" [src]="bannersService.currentBannerSrc" type="video/webm" autoplay muted loop></video>
+	</ng-container>
+</div>

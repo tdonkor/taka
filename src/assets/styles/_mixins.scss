@@ -1,0 +1,16 @@
+@mixin transition--150 {
+  transition: all 150ms ease-in;
+}
+
+@mixin transition--250 {
+  transition: all 250ms ease-in;
+}
+
+@mixin transition--350 {
+  transition: all 350ms ease-in;
+}
+
+@mixin center {
+  left: 50%;
+  transform: translateX(-50%);
+}

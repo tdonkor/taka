@@ -1,0 +1,16 @@
+<button class="product {{ extraClasses }}"
+  [ngClass]="{hasBackground: displayBackground, 'product--status-not-available' : isButtonStatusUnavailable}"
+  attr.aria-label="Button: {{ button | dotTranslateCaption }}">
+  <h5 class="product__title">{{ button | dotTranslateCaption }}</h5>
+  <img class="product__img" [src]="button | translatePicture" alt="">
+  <div class="product__info">
+    <span class="calories"><span *ngIf="calories && price > 0">{{ calories }} {{ '65' | dotTranslate }} |
+      </span>{{ price | dotCurrency }}</span>
+    <svg class="lib-icon color--tertiary size--30">
+      <use href="#lib-icon--pill-chevron-right"></use>
+    </svg>
+  </div>
+  <ng-template [ngIf]="isButtonStatusUnavailable">
+    <div class="product__overlay-status-not-available">{{'20210401001' | dotTranslate}}</div>
+  </ng-template>
+</button>

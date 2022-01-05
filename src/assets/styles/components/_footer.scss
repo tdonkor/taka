@@ -1,0 +1,129 @@
+@use '../mixins';
+
+.footer {
+  &__info {
+    padding: 0 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--secondary);
+    height: 100%;
+
+    .ui-button {
+      font-size: 26rem;
+    }
+  }
+
+  &__body {
+    background: var(--primary);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 210rem;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+  }
+
+  &__left {
+    display: flex;
+    padding: 0 50rem 0 30rem;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+
+    .ui-button {
+      font-size: 20rem;
+    }
+  }
+
+  .ada-button {
+    position: absolute;
+    left: 30rem;
+    bottom: 0;
+    top: 0;
+
+    .lib-icon {
+      margin: 0;
+    }
+  }
+
+  &__cart {
+    width: 210rem;
+    height: 210rem;
+    background: var(--white);
+    border-top-left-radius: 30rem;
+    border-top-right-radius: 30rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    filter: var(--shadow-filter);
+
+    @include mixins.center;
+  }
+
+  .cart-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 36rem;
+    position: relative;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      padding-left: 6rem;
+      width: 70rem;
+
+      > * {
+        font-weight: normal;
+        font-size: 24rem;
+        font-family: var(--font-secondary);
+        text-align: left;
+      }
+    }
+
+    &__line {
+      height: 8rem;
+      border-radius: 8rem;
+      background: var(--accent);
+      margin: 6rem auto;
+      width: 150rem;
+    }
+
+    &__nr {
+      position: absolute;
+      right: 38rem;
+      top: 34rem;
+      width: 60rem;
+      height: 60rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--accent);
+
+      > * {
+        color: currentColor;
+        font-size: 40rem;
+      }
+    }
+
+    .cart-icon--chevron {
+      position: absolute;
+      top: 15rem;
+
+      @include mixins.center;
+    }
+  }
+}

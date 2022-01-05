@@ -1,0 +1,28 @@
+
+<div [@popupOut] *ngIf="!exitAnimation" class="popup popup--calories">
+  <div [@popupIn] class="content">
+    <div class="main-grid">
+      <section class="col-1-17 row-1-28">
+        <img *ngIf="images && images.length > 0" class="calories__img full" [src]="currentImage" alt="">
+        <h3 *ngIf="!images || images.length <= 0" class="text--center p--40">{{ '2021012201' | dotTranslate }}</h3>
+      </section>
+      <div class="actions m--0 flex center col-1-17 row-28-31">
+        <button class="ui-button secondary iconLeft small" (click)="closeClick()" [attr.aria-label]="'Cancel Button'">
+          <span class="ui-button__wrapper">
+            <svg class="lib-icon size--20"><use href="#lib-icon--cross"></use></svg>
+            <span>{{ '24' | dotTranslate }}</span>
+          </span>
+        </button>
+        <nav *ngIf="images && images.length > 0" class="pagination flex center">
+          <button class="pagination__button flex center" (click)="previousImage()" [disabled] = "currentIndex <=0">
+            <svg class="lib-icon size--42 color--accent"><use href="#lib-icon--pill-chevron-left"></use></svg>
+          </button>
+          <h5 class="pagination__nr"> {{ currentIndex + 1 }} </h5>
+          <button class="pagination__button flex center" (click)="nextImage()" [disabled] = "images && currentIndex >=images.length-1">
+            <svg class="lib-icon size--42 color--accent"><use href="#lib-icon--pill-chevron-right"></use></svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<button #arrowLeft (click)="onScrollUp()" [disabled]="disableUpArrow" class="scroll-nav__up" [attr.aria-label]="'Scroll Nav Button: Scroll Up'" >
+  <span class="scroll-nav__text">{{'2021081801' | dotTranslate}}</span>
+  <div class="scroll-nav__icon">
+    <svg class="lib-icon color--white size--30">
+      <use href="#lib-icon--chevron-up"></use>
+    </svg>
+  </div>
+</button>
+
+<button #arrowRight (click)="onScrollDown()" [disabled]="disableDownArrow" class="scroll-nav__down" [attr.aria-label]="'Scroll Nav Button: Scroll Down'" >
+  <div class="scroll-nav__icon">
+    <svg class="lib-icon color--white size--30">
+      <use href="#lib-icon--chevron-down"></use>
+    </svg>
+  </div>
+  <span class="scroll-nav__text">{{'2021081802' | dotTranslate}}</span>
+</button>

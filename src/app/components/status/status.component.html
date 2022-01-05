@@ -1,0 +1,9 @@
+<div class="peripherals-status" [ngClass]="{'hasBackground' : messages.length > 0}">
+  <div class="peripherals-status__messages eventsNone" [attr.aria-label]="'Status Messages'">
+    <ng-container *ngIf="messages.length > 0">
+      <p *ngFor="let message of messages">{{ message }}</p>
+    </ng-container>
+    <!-- Glory Cash Errors Color Codes -->
+    <div class="color-code eventsNone {{statusBulletColorClass}}" aria-label="Color Code"></div>
+  </div>
+</div>

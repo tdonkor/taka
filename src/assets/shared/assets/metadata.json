@@ -1,0 +1,12 @@
+{
+  "timeStamp": "2022-01-04T12:20:41+00:00",
+  "param": {
+    "workspaceName": "TakaTaka New Data",
+    "workspaceId": 1,
+    "campaignName": "Lab",
+    "campaignId": 1,
+    "packageType": "full",
+    "clientName": "Taka Taka",
+    "serverName": "kioskbuilder-p3.acrelec.com"
+  }
+}

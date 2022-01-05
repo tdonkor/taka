@@ -1,0 +1,28 @@
+<div class="main-grid">
+  <section class="flex flex--column center" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-1-8' : 'col-1-17 row-1-10'">
+    <img class="logo" src="./assets/branding/takahead.PNG" alt="" />
+  </section>
+  <div class="flex flex--column align--center" [ngClass]="!isAdaEnabled() ? 'col-2-16 row-8-28' : 'col-4-14 row-10-27'">
+    <h3 class="m--20 text--center">{{ '74' | dotTranslate }}</h3>
+    <div class="payment-types entry">
+      <button class="payment-type" (click)="goToSelection()">
+        <img src="./assets/images/table-service-flag.png" alt="Table Service Flag"/>
+        <div class="payment-type__text">
+          <h3 class="payment-name">{{ '75' | dotTranslate }}</h3>
+          <svg class="lib-icon size--54 color--tertiary">
+            <use href="#lib-icon--pill-chevron-right"></use>
+          </svg>
+        </div>
+      </button>
+      <button class="payment-type" (click)="cancel()">
+        <img src="./assets/images/payment-selection--counter.png" alt="Table Service Counter">
+        <div class="payment-type__text">
+          <h3 class="payment-name">{{ '72' | dotTranslate }}</h3>
+          <svg class="lib-icon size--54 color--tertiary">
+            <use href="#lib-icon--pill-chevron-right"></use>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

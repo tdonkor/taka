@@ -1,0 +1,19 @@
+{
+  "Status": "OK",
+  "BusinessDay": "2019-12-02",
+  "CustomerReason": "",
+  "TechnicalReason": "",
+  "DataVersion": "20191202 11:26:00",
+  "ErrorType": 0,
+  "ErrorCode": 0,
+  "ExecuteStarted": true,
+  "InternalReturnCode": 0,
+  "ReturnCode": 0,
+  "Class": null,
+  "FuncErrorOccurred": null,
+  "ReturnMessageDetail": null,
+  "POSErrorMessage": "",
+  "ReturnMessage": "",
+  "Success": true,
+  "Injector": "c:\\Acrelec\\AcrBridgeService\\DOTXV.GenericPOSInjector.exe v 1.0.32.4"
+}
