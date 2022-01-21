@@ -35,19 +35,19 @@
     </button>
   </div>
   <!-- Language selection area -->
-  <div *ngIf="appSettings.languages.length > 1" class="languages" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-24-27' : 'col-1-17 row-21-27'">
-    <h4 class="fs--34">{{ '13' | dotTranslate }}</h4>
-    <div class="spacer--30"></div>
-    <div class="languages__wrapper">
-      <button class="language"
-              *ngFor="let language of appSettings.languages"
-              (click)="onLanguageButtonClick(language.code)"
-              [ngClass]="{ active: isLanguageButtonActive(language.code) }"
-              [attr.aria-label]="'Language: ' + language.name">
-        <img class="language--icon" [src]="'./assets/images/languages/' + language.code + '.svg'" alt="" />
-      </button>
-    </div>
-  </div>
+<!--  <div *ngIf="appSettings.languages.length > 1" class="languages" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-24-27' : 'col-1-17 row-21-27'">-->
+<!--    <h4 class="fs&#45;&#45;34">{{ '13' | dotTranslate }}</h4>-->
+<!--    <div class="spacer&#45;&#45;30"></div>-->
+<!--    <div class="languages__wrapper">-->
+<!--      <button class="language"-->
+<!--              *ngFor="let language of appSettings.languages"-->
+<!--              (click)="onLanguageButtonClick(language.code)"-->
+<!--              [ngClass]="{ active: isLanguageButtonActive(language.code) }"-->
+<!--              [attr.aria-label]="'Language: ' + language.name">-->
+<!--        <img class="language&#45;&#45;icon" [src]="'./assets/images/languages/' + language.code + '.svg'" alt="" />-->
+<!--      </button>-->
+<!--    </div>-->
+<!--  </div>-->
   <footer class="footer" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-28-31' : 'col-1-17 row-26-31'">
     <div class="footer__body">
       <button class="ui-button icon-button ada-button" [attr.aria-label]="'Accessibility Switcher'" (click)="switchAdaMode()">
