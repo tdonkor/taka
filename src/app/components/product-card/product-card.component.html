@@ -20,7 +20,7 @@
         <ul class="card__contents-list" *ngIf="hasExtraItems">
           <li *ngFor="let item of extraItems">
             <span *ngIf="item.quantity > 1 && !hasDefaultQuantity(item)">{{item.quantity}} x </span>
-            <span >{{ getProductNameWithPrefixes(item) | translatePrefixesName}}</span> 
+            <span >{{ getProductNameWithPrefixes(item) | translatePrefixesName}}</span>
             <span *ngIf="item.quantity > 0 && !hasDefaultQuantity(item)"> {{ item | dotTranslateCaption}}</span>
             <h5 class="display--inline-block" *ngIf="hasDefaultQuantity(item) && defaultQuantityLabel(item).length > 0"> {{defaultQuantityLabel(item)}}</h5>
             <div class="ml--20 font--tertiary fs--20">{{getSelectedComboModifiers(item)}}</div>
@@ -53,7 +53,7 @@
         <img class="subcard__item-image" [src]="child | translatePicture">
         <div class="subcard__item-product">
           <header class="subcard__item-header">
-            <span class="subcard__item-quantity" *ngIf="!child.isPromo && child.quantity > 1">{{child.quantity}}x</span> 
+            <span class="subcard__item-quantity" *ngIf="!child.isPromo && child.quantity > 1">{{child.quantity}}x</span>
             <span class="subcard__item-title">{{ child | dotTranslateCaption }}</span>
             <span class="subcard__item-price font--secondary">{{ child.Price | dotCurrency }}</span>
           </header>
@@ -66,14 +66,14 @@
           </ul>
         </div>
         <div class="subcard__actions">
-          <button  
+          <button
             class="ui-button primary tiny color--tertiary pl--40 fs--22"
             (click)="onRemoveClick(child)"
             [attr.aria-label]="'Button: Remove'"
             *ngIf="!child.isPromo && skipPrecalculate">
               {{ "2021041901" | dotTranslate }}
           </button>
-          <button  
+          <button
             class="ui-button primary tiny color--tertiary pl--40 fs--22"
             (click)="changeProduct(child)"
             [attr.aria-label]="'Button: Change'"
@@ -84,7 +84,7 @@
       </div>
     </div>
     <!-- link to parent subcard end-->
-    
+
     <h5 class="card__price p--20">{{ formattedPrice }}</h5>
   </div>
 </div>

@@ -82,6 +82,7 @@
     text-align: left;
     font-size: 32rem;
     line-height: 1;
+    color: var(--pantone-blue);
   }
 
   &__img {
@@ -187,7 +188,7 @@
 
     .product__title {
       text-align: center;
-      font-size: 24rem;
+      font-size: 30px;
     }
 
     .product__subtitle {
@@ -226,3 +227,4 @@
     }
   }
 }
+

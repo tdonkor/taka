@@ -1,52 +1,73 @@
 [
 	{
-		"ID": 12,
-		"Name": "Banner 1 WITH GRILL",
-		"Image": "banner_GRILL VERTICAL.jpg",
+		"ID": 1,
+		"Name": " Main Banner",
+		"Image": "banner_2e9dc97a-cabc-4168-bf7b-ea6ec6f8c2f0.png",
 		"Active": true,
 		"Interval": 7000,
-		"Order": 10,
+		"Order": 1,
 		"Skin": "FullHD",
 		"BannerType": "Slide"
 	},
 	{
-		"ID": 13,
+		"ID": 2,
 		"Name": "Banner 2 WITH MAGIC ROLL",
 		"Image": "banner_MAGIC ROLL VERTICAL.jpg",
 		"Active": true,
 		"Interval": 7000,
-		"Order": 11,
+		"Order": 2,
 		"Skin": "FullHD",
 		"BannerType": "Slide"
 	},
 	{
-		"ID": 14,
+		"ID": 3,
 		"Name": "Banner 3 WITH MEAL DEAL",
 		"Image": "banner_MEAL DEAL VERTICAL.jpg",
 		"Active": true,
 		"Interval": 7000,
-		"Order": 12,
+		"Order": 3,
 		"Skin": "FullHD",
 		"BannerType": "Slide"
 	},
 	{
-		"ID": 13,
+		"ID": 4,
 		"Name": "Banner 2 WITH ORIGINALS",
 		"Image": "banner_ORIGINALS VERTICAL.jpg",
 		"Active": true,
 		"Interval": 7000,
-		"Order": 11,
+		"Order": 4,
 		"Skin": "FullHD",
 		"BannerType": "Slide"
 	},
 	{
-		"ID": 14,
+		"ID": 5,
 		"Name": "Banner 3 WITH SIDES",
 		"Image": "banner_SIDES VERTICAL.jpg",
 		"Active": true,
 		"Interval": 7000,
-		"Order": 12,
+		"Order": 5,
 		"Skin": "FullHD",
 		"BannerType": "Slide"
-	}
+	},
+  {
+  "ID": 5,
+  "Name": "Banner 3 WITH Grill",
+  "Image": "banner_GRILL VERTICAL.jpgL",
+  "Active": true,
+  "Interval": 7000,
+  "Order": 5,
+  "Skin": "FullHD",
+  "BannerType": "Slide"
+  },
+  {
+    "ID": 3,
+    "Name": "New Banner",
+    "Image": "banner_2e9dc97a-cabc-4168-bf7b-ea6ec6f8c2f0_Access.png",
+    "Active": false,
+    "Interval": 5000,
+    "Order": 1,
+    "Skin": "Accessibility",
+    "BannerType": "Slide",
+    "Avlb": null
+  }
 ]
