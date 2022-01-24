@@ -133,6 +133,18 @@ export class TranslationsService {
     }
   }
 
+  // added by TD
+  public getTranslatedButtonDescription(item: DotButton): string {
+      if (item && item.DescriptionDictionary && this._currentLanguage && this._currentLanguage.code) {
+        const t = item.DescriptionDictionary[this._currentLanguage.code.toUpperCase()];
+        return t ? t : item.DescriptionDictionary['DEF'];
+      } else if (item && item.Description) {
+        return item.Description;
+      } else {
+        return null;
+      }
+    }
+
   public getTranslatedButtonPicture(item: DotButton): string {
     if (
       item &&

@@ -18,6 +18,7 @@ import { DotCdkTranslatePipe } from './dot-translate.pipe';
 import { DotCdkTitleTranslatePipe } from './dot-title-translate.pipe';
 import { MakeItAMealTitlePipe } from './translate-make-it-a-meal-title.pipe';
 import { MakeItAMealPricePipe } from './translate-make-it-a-meal-price.pipe';
+import { TranslateCatalogDescription } from './translate-catalog-description.pipe';
 
 @NgModule({
     declarations: [
@@ -40,7 +41,8 @@ import { MakeItAMealPricePipe } from './translate-make-it-a-meal-price.pipe';
         CurrencyPipe,
         DotCdkTitleTranslatePipe,
         MakeItAMealTitlePipe,
-        MakeItAMealPricePipe
+        MakeItAMealPricePipe,
+        TranslateCatalogDescription
     ],
     exports: [
         TranslatePicturePipe,
@@ -61,7 +63,8 @@ import { MakeItAMealPricePipe } from './translate-make-it-a-meal-price.pipe';
         DotCdkTranslatePipe,
         DotCdkTitleTranslatePipe,
         MakeItAMealTitlePipe,
-        MakeItAMealPricePipe
+        MakeItAMealPricePipe,
+      TranslateCatalogDescription
     ],
     providers: [
         TranslatePicturePipe,
@@ -69,7 +72,8 @@ import { MakeItAMealPricePipe } from './translate-make-it-a-meal-price.pipe';
         TranslateCatalogTitle,
         ComboModifierLabelTranslationPipe,
         TranslateCatalogModifierLabel,
-        CurrencyPipe
+        CurrencyPipe,
+        TranslateCatalogDescription
     ]
 })
 export class PipesModule {}
