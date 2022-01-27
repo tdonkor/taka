@@ -42,7 +42,7 @@
 
 .price {
   text-align: left;
-  color: var(--pantone-blue);  // Added by TD;
+  color: var(--icon-primary-color);  // Added by TD;
   font-size: 30px;
   padding: 5px;
 
@@ -62,7 +62,12 @@
 }
 
 .item-container {
-  margin: 20px;
+  margin: 15px;
   padding: 10px;
-  border: solid 1px black;
+  align-items: normal;
+  border-radius: var(--product-border-radius);
+
+  filter: var(--shadow-filter);
+  color: var(--tertiary);
+  background-color: var(--secondary);
 }
