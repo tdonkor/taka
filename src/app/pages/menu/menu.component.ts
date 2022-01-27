@@ -110,6 +110,10 @@ export class MenuComponent implements OnDestroy, OnInit, AfterViewChecked, After
   }
 
   public select(button: DotButton) {
+    if (button.Page?.PageType === 'Group') {
+      this.openDynamicContentService(GroupTypeComponent, button);
+      return;
+    }
     if (this.unavailableButton(button)) {
       return;
     }
@@ -151,16 +155,6 @@ export class MenuComponent implements OnDestroy, OnInit, AfterViewChecked, After
       } else {
         this.navigateToNextScreen(button);
       }
-    }
-
-    // new group code added by TD
-
-    // button.Page.PageType
-    if (button.Page?.PageType === 'Group') {
-
-      this.openDynamicContentService(GroupTypeComponent, button);
-      return;
-
     }
   }
 

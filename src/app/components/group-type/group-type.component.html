@@ -1,32 +1,38 @@
 <div [@popupOut] *ngIf="!exitAnimation" class="popup">
   <div [@popupIn] class="content">
     <header class="actions col-1-17 row-28-31">
-      <button class="ui-button primary small btn-1" (click)="cancelClick()">
-        <span class="ui-button__wrapper">
-          <span>{{ '23' | dotTranslate }}</span>
-        </span>
-      </button>
+      <div class='title-name'>
+        {{ title | uppercase }}
+      </div>
     </header>
     <div>
       <section [ngClass]="">
 <!--        <span class="product__title">CHOOSE <span class="pink">FRIED</span> OR <span class="pink">GRILLED</span></span>-->
-        <div class='title-name'>
-           {{ title }}
-        </div>
         <div class="choose-wrapper">
           <button *ngFor="let btn of buttons">
-            <div class="product__img-placeholder" (click)="selectCookType(btn)">
-              <img class="product__img" [src]="btn | catalogPicture" />
-              <div class='caption'>{{btn.Caption}}</div>
+            <div class='item-container'>
+              <div class="product__img-placeholder" (click)="selectCookType(btn)">
+                <div class='caption'>{{btn.Caption | uppercase}}</div>
+                <img class="product__img" [src]="btn | catalogPicture" />
+              </div>
             </div>
+
             <div class='price'>
               {{ btn.Price | dotCurrency }}
             </div>
-
           </button>
         </div>
       </section>
     </div>
+  </div>
+  <div [@popupIn] class="footer" >
+  <div class="actions col-18-35 row-25-28">
+    <button class="ui-button primary small btn-1" (click)="cancelClick()">
+        <span class="ui-button__wrapper">
+          <span>{{ '23' | dotTranslate }}</span>
+        </span>
+    </button>
+  </div>
   </div>
 </div>
 

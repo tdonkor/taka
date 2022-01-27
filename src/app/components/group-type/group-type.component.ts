@@ -143,8 +143,7 @@ export class GroupTypeComponent  extends AbstractDynamicComponent
     this.button = _.cloneDeep(this.dataParams.btn.Page.Buttons);
     // console.log(this.button, 'SSSSSSSSSSSSSSSSSSSSS');
 
-    this.title = this.dataParams.btn.Page.Name;
-    console.log('price: ' + this.button.name);
+    this.title = this.dataParams.btn.Page.getTitle();
 
     this.button.quantity = this.button.quantity ? this.button.quantity : 1;
     this.catalogModifierLabelText = this.translateCatalogModifierLabel.transform(this.button);
@@ -156,7 +155,6 @@ export class GroupTypeComponent  extends AbstractDynamicComponent
 
   public ngAfterContentChecked() {
     this.ref.detectChanges();
-
   }
 
   public ngAfterViewChecked() {

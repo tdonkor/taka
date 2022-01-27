@@ -1,6 +1,7 @@
 .popup .content {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+
 }
 
 .product__title {
@@ -10,10 +11,6 @@
   text-transform: uppercase;
   display: block;
   margin-top: 20px;
-
-  .pink {
-    color: #E71984;
-  }
 }
 
 .choose-wrapper {
@@ -31,14 +28,14 @@
 .title-name {
   text-align: center;
   color: var(--pantone-blue);  // Added by TD;
-  font-size: 60px;
+  font-size: 50px;
   padding: 5px;
 
 }
 .caption {
   text-align: left;
   color: var(--pantone-blue);  // Added by TD;
-  font-size: 30px;
+  font-size: 35px;
   padding: 5px;
 
 }
@@ -49,4 +46,23 @@
   font-size: 30px;
   padding: 5px;
 
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: var(--primary);
+  justify-content: space-between;
+  margin: 0;
+  min-height: 150rem;
+  width:95%;
+
+}
+
+.item-container {
+  margin: 20px;
+  padding: 10px;
+  border: solid 1px black;
 }
