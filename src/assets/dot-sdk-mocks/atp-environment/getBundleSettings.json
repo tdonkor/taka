@@ -23,7 +23,7 @@
 	"ipAddress": "192.168.254.1",
 	"printerMaxCharsPerRow": 40,
 	"reverseBasketOrder": false,
-	"skipPrecalculate": false,
+	"skipPrecalculate": true,
 	"maxPaymentRetries": 2,
 	"minOrderAmount": 10,
 	"paymentTypes": "[{'PaymentType': 'card', 'PaymentName': 'SIMULATOR', 'Image': 'payment-selection--pos.png', 'PaymentRetries': 3, 'PaymentIsEnabled': true, 'Icon': ['icon--mastercard.svg', 'icon--visa.svg']}, {'PaymentType': 'cash', 'PaymentName': 'PAY_SIMULATOR_CASH_INTERACTIVE', 'Image': 'payment-selection--glory.png', 'PaymentRetries': 1, 'PaymentIsEnabled': true, 'TenderMediaID': 'cash', 'Icon': ['icon--gpay.svg']}, {'PaymentType': 'preorder', 'PaymentName': 'PAY_AT_COUNTER', 'Image': 'payment-selection--counter.png', 'PaymentIsEnabled': true}]",

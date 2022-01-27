@@ -1,0 +1,52 @@
+.popup .content {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.product__title {
+  font-size: 3.6em;
+  text-align: center;
+  font-family: "Fresh-Daily";
+  text-transform: uppercase;
+  display: block;
+  margin-top: 20px;
+
+  .pink {
+    color: #E71984;
+  }
+}
+
+.choose-wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  padding: 0 40px;
+  p {
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-top: 0;
+    color: var(--pantone-blue);  // Added by TD;
+  }
+}
+.title-name {
+  text-align: center;
+  color: var(--pantone-blue);  // Added by TD;
+  font-size: 60px;
+  padding: 5px;
+
+}
+.caption {
+  text-align: left;
+  color: var(--pantone-blue);  // Added by TD;
+  font-size: 30px;
+  padding: 5px;
+
+}
+
+.price {
+  text-align: left;
+  color: var(--pantone-blue);  // Added by TD;
+  font-size: 30px;
+  padding: 5px;
+
+}

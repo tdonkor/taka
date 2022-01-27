@@ -63,7 +63,7 @@ export class ProductCardComponent implements OnInit, OnDestroy {
   }
 
   public get formattedPrice(): string {
-    return this.basketButton['$$OrderDiscount'] ? this.basketButton.Price : this.dotCurrencyPipe.transform(this.price);
+    return this.basketButton['$$OrderDiscount'] ? this.basketButton.Price : this.dotCurrencyPipe.transform(this.price * this.quantity);
   }
 
   public get quantity(): number {

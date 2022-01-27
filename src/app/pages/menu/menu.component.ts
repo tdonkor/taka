@@ -25,6 +25,7 @@ import { log } from '../../helpers/log.helper';
 
 import { ProductStatus } from '../../models/enums/general.enum';
 import { AbstractDynamicComponent } from '../../services/dynamic-content/models/abstract-dynamic.component';
+import { GroupTypeComponent } from '@dotxix/components/group-type/group-type.component';
 interface DropdownPage {
   display: boolean;
   row?: number;
@@ -150,6 +151,16 @@ export class MenuComponent implements OnDestroy, OnInit, AfterViewChecked, After
       } else {
         this.navigateToNextScreen(button);
       }
+    }
+
+    // new group code added by TD
+
+    // button.Page.PageType
+    if (button.Page?.PageType === 'Group') {
+
+      this.openDynamicContentService(GroupTypeComponent, button);
+      return;
+
     }
   }
 

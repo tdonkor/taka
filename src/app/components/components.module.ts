@@ -33,6 +33,7 @@ import { SuggestionSalesComponent } from './suggestion-sales/suggestion-sales.co
 
 import { VerticalScrollButtonsComponent } from './vertical-scroll-buttons/vertical-scroll-buttons.component';
 import { VoucherInfoComponent } from './voucher-info/voucher-info.component';
+import { GroupTypeComponent } from './group-type/group-type.component';
 
 import {
   PreorderComponent,
@@ -41,6 +42,7 @@ import {
   TableServiceSelectionComponent,
   TableServiceUnavailableComponent,
 } from '../pages/';
+
 
 const COMPONENTS = [
   ButtonComponent,
@@ -66,6 +68,7 @@ const COMPONENTS = [
   PaymentLogosComponent,
   StepsComponent,
   VerticalScrollButtonsComponent,
+  GroupTypeComponent
 ];
 
 const ENTRY_COMPONENTS = [
@@ -81,11 +84,12 @@ const ENTRY_COMPONENTS = [
   AdaBannersComponent,
   InfoDialogComponent,
   PromoStepperComponent,
-  ButtonModifierSubgroupComponent
+  ButtonModifierSubgroupComponent,
+  GroupTypeComponent
 ];
 @NgModule({
   imports: [CommonModule, PipesModule],
-  declarations: [ENTRY_COMPONENTS, COMPONENTS],
+  declarations: [ENTRY_COMPONENTS, COMPONENTS, GroupTypeComponent],
   entryComponents: [ENTRY_COMPONENTS],
   exports: [COMPONENTS, ENTRY_COMPONENTS],
 })
