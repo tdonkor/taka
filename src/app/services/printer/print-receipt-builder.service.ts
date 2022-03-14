@@ -92,6 +92,10 @@ export class PrintReceiptBuilder {
     return lStr;
   }
 
+  public alignRight(value: 'on' | 'off'): string {
+    return this.sdkReceiptBuilder.alignRight(value);
+  }
+
   public addContent(content: string): string {
     return content ? this.sdkReceiptBuilder.addContent(content.charAt(0).toUpperCase() + content.slice(1)) : '';
   }

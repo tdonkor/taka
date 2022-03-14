@@ -94,6 +94,7 @@ export class PrinterService {
     this.printReceiptBuilder.newLine(5);
     this.printReceiptBuilder.cut();
     this.translationsService.setCurrentLanguage(oldLanguage);
+    // console.log('\n***** RECEIPT ***** \n' + this.printReceiptBuilder.getContent + '\n***********************\n');
     return this.printReceiptBuilder.getContent;
   }
 
